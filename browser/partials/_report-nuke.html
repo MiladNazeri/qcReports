@@ -1,0 +1,47 @@
+<div ng-show="newReport.assets_expected_for_qc.nuke_setup">
+    <h2>Nuke</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nuke_projects_job_number">Job Number</label>
+                <input type="text" ng-model="newReport.nuke_projects.job_number" class="form-control" id="nuke_projects_job_number" placeholder="Job Number">
+                <label for="nuke_projects_nuke_operator">Nuke Operator</label>
+                <input type="text" ng-model="newReport.nuke_projects.nuke_operator" class="form-control" id="nuke_projects_nuke_operator" placeholder="Nuke Operator">
+                <label for="nuke_projects_date">Date</label>
+                <input type="text" ng-model="newReport.nuke_projects.date" class="form-control" id="nuke_projects_date" placeholder="Date">
+                <label for="nuke_projects_are_all_setups_clearly_labeled_yes_no">Are all setups clearly labeld?</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_all_setups_clearly_labeled.yes_no" class="form-control" id="nuke_projects_are_all_setups_clearly_labeled_yes_no" placeholder="Are all setups clearly labeld?">
+                <label for="nuke_projects_are_all_setups_clearly_labeled_notes">Notes</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_all_setups_clearly_labeled.notes" class="form-control" id="nuke_projects_are_all_setups_clearly_labeled_notes" placeholder="Notes?">
+                <label for="nuke_projects_are_all_relevant_comps_editable_yes_no">Are all relevant comps editable?</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_all_relevant_comps_editable.yes_no" class="form-control" id="nuke_projects_are_all_relevant_comps_editable_yes_no" placeholder="Are all relevant comps editable?">
+                <label for="nuke_projects_are_all_relevant_comps_editable_notes">Notes</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_all_relevant_comps_editable.notes" class="form-control" id="nuke_projects_are_all_relevant_comps_editable_notes" placeholder="Notes">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nuke_projects_are_there_missing_plugins_yes_no">Are There Missing Plugins?</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_there_missing_plugins.yes_no" class="form-control" id="nuke_projects_are_there_missing_plugins_yes_no" placeholder="Are There Missing Plugins?">
+                <label for="nuke_projects_are_there_missing_plugins_notes">Notes</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_there_missing_plugins.notes" class="form-control" id="nuke_projects_are_there_missing_plugins_notes" placeholder="Notes?">
+                <label for="nuke_projects_are_there_missing_fonts_yes_no">Are There Missing Fonts?</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_there_missing_fonts.yes_no" class="form-control" id="nuke_projects_are_there_missing_fonts_yes_no" placeholder="Are There Missing Fonts?">
+                <label for="nuke_projects_are_there_missing_fonts_notes">Notes?</label>
+                <input type="text" ng-model="newReport.nuke_projects.are_there_missing_fonts.notes" class="form-control" id="nuke_projects_are_there_missing_fonts_notes" placeholder="Notes?">
+                <label for="nuke_projects_frame_rates">Frame Rates?</label>
+                <input type="text" ng-model="newReport.nuke_projects.frame_rates" placeholder="Frame Rates?" class="form-control" id="nuke_projects_frame_rates">
+                <label for="nuke_projects_notes">Notes</label>
+                <input type="text" ng-model="newReport.nuke_projects.notes" placeholder="Notes" class="form-control" id="nuke_projects_notes">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="nuke_projects_pass_fail">Pass Or Fail</label>
+                <input type="text" ng-model="newReport.nuke_projects.pass_fail" class="form-control" id="nuke_projects_pass_fail" placeholder="Pass Or Fail">
+            </div>
+        </div>
+    </div>
+</div>

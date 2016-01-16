@@ -1,0 +1,53 @@
+<div ng-show="newReport.assets_expected_for_qc.flame_archive">
+    <h2>Flame</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="flame_job_number">Job Number</label>
+                <input type="text" ng-model="newReport.flame.job_number" placeholder="Job Number" class="form-control" id="flame_job_number">
+                <label for="flame_operator">Operator</label>
+                <input type="text" ng-model="newReport.flame.flame_operator" placeholder="Operator" class="form-control" id="flame_operator">
+                <label for="flame_date">Date</label>
+                <input type="text" ng-model="newReport.flame.date" placeholder="Date" class="form-control" id="flame_date">
+                <label for="flame_is_project_organized">Is Project Organized</label>
+                <input type="text" ng-model="newReport.flame.is_project_organized.yes_no" placeholder="Is Project Organized" class="form-control" id="flame_is_project_organized">
+                <label for="flame_is_project_organized_notes">Notes</label>
+                <input type="text" ng-model="newReport.flame.is_project_organized.notes" placeholder="Notes" class="form-control" id="flame_is_project_organized_notes">
+                <label for="flame_were_setups_provided">Were Setups Provided?</label>
+                <input type="text" ng-model="newReport.flame.were_setups_provided" placeholder="Were Setups Provided?" class="form-control" id="flame_were_setups_provided">
+                <label for="flame_if_yes_what_format">If Yes,What Format?</label>
+                <input type="text" ng-model="newReport.flame.if_yes_what_format" placeholder="If Yes, What Format?" class="form-control" id="flame_if_yes_what_format">
+                <label for="flame_are_setups_organized_yes_no">Are Setups Organized?</label>
+                <input type="text" ng-model="newReport.flame.are_setups_organized.yes_no" placeholder="Are Setups Organized?" class="form-control" id="flame_are_setups_organized_yes_no">
+                <label for="flame_are_setups_organized_notes">Notes?</label>
+                <input type="text" ng-model="newReport.flame.are_setups_organized.notes" placeholder="Notes?" class="form-control" id="flame_are_setups_organized_notes">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="flame_are_there_missing_plugins">Are There Missing Plugins?</label>
+            <input type="text" ng-model="newReport.flame.are_there_missing_plugins.yes_no" placeholder="Are There Missing Plugins?" class="form-control" id="flame_are_there_missing_plugins">
+            <label for="flame_are_there_missing_plugins_notes">Notes</label>
+            <input type="text" ng-model="newReport.flame_are_there_missing_plugins.notes" placeholder="Notes" class="form-control" id="flame_are_there_missing_plugins_notes">
+            <label for="flame_are_all_relevant_comps_editable">Are All Relevant Comps Editable?</label>
+            <input type="text" ng-model="newReport.flame.are_all_relevant_comps_editable.yes_no" placeholder="Are All Relevant Comps Editable?" class="form-control" id="flame_are_all_relevant_comps_editable">
+            <label for="flame_are_all_relevant_comps_editable_notes">Notes</label>
+            <input type="text" ng-model="newReport.flame.are_all_relevant_comps_editable.notes" placeholder="Notes" class="form-control" id="flame_are_all_relevant_comps_editable.notes">
+            <label for="flame_are_there_master_conforms">Are There Master Conforms?</label>
+            <input type="text" ng-model="newReport.flame.are_there_master_conforms" placeholder="Are There Master Conforms?" class="form-control" id="flame_are_there_master_conforms">
+            <label for="flame_are_there_master_renders">Are There Master Renders?</label>
+            <input type="text" ng-model="newReport.flame.are_there_master_renders" placeholder="Are There Master Renders?" class="form-control" id="flame_are_there_master_renders">
+            <label for="flame_frame_rates">Frame Rates?</label>
+            <input type="text" ng-model="newReport.flame.frame_rates" placeholder="Frame Rates?" class="form-control" id="flame_frame_rates">
+            <label for="flame_notes">Notes</label>
+            <input type="text" ng-model="newReport.flame.notes" placeholder="Notes?" class="form-control" id="flame_notes">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="flame_pass_fail">Pass Or Fail</label>
+                <input type="text" ng-model="newReport.flame.pass_fail" class="form-control" id="flame_pass_fail" placeholder="Pass Or Fail">
+            </div>
+        </div>
+    </div>
+</div>

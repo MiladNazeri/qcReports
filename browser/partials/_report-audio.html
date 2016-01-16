@@ -1,0 +1,81 @@
+<div ng-show="newReport.assets_expected_for_qc.audio_files">
+    <h2>Audio</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="audio_job_number">Job Number</label>
+                <input type="text" ng-model="newReport.audio_files.job_number" class="form-control" id="audio_job_number" placeholder="Job Number">
+            </div>
+            <div class="form-group">
+                <label for="audio_qc_operator">QC Operator</label>
+                <input type="text" ng-model="newReport.audio_files.qc_operator" class="form-control" id="audio_qc_operator" placeholder="qc_operator">
+            </div>
+            <div class="form-group">
+                <label for="audio_date">Date</label>
+                <input type="text" ng-model="newReport.audio_files.date" class="form-control" id="audio_date" placeholder="Date">
+            </div>
+            <div class="form-group">
+                <label for="audio_file_type">File Type</label>
+                <input type="text" ng-model="newReport.audio_files.file_type" class="form-control" id="audio_file_type" placeholder="File Type">
+            </div>
+            <div class="form-group">
+                <label for="full_mix_included">Full Mix: Included?</label>
+                <input type="text" ng-model="newReport.audio_files.full_mix.included" class="form-control" id="audio_full_mix_included" placeholder="Fullmix: Included?">
+            </div>
+            <div class="form-group">
+                <label for="full_mix_mono_stereo">Full Mix: Mono or Stereo</label>
+                <input type="text" ng-model="newReport.audio_files.full_mix.mono_stereo" class="form-control" id="audio_full_mix_mono_stereo" placeholder="Fullmix: Mono or Stereo">
+            </div>
+            <div class="form-group">
+                <label for="full_mix_twelve_frame_mute">Full Mix: Twelve Frame Mute</label>
+                <input type="text" ng-model="newReport.audio_files.full_mix.twelve_frame_mute" class="form-control" id="audio_full_mix_twelve_frame_mute" placeholder="Fullmix: Twelve Frame Mute">
+            </div>
+            <div class="form-group">
+                <label for="full_mix_sample_rate">Full Mix: Sample Rate</label>
+                <input type="text" ng-model="newReport.audio_files.full_mix.sample_rate" class="form-control" id="audio_full_mix_sample_rate" placeholder="Fullmix: Sample Rate">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="splits_included">Splits: Included?</label>
+                <input type="text" ng-model="newReport.audio_files.splits.included" class="form-control" id="audio_splits_included" placeholder="Splits: Included?">
+            </div>
+            <div class="form-group">
+                <label for="splits_mono_stereo">Splits: Mono or Stereo</label>
+                <input type="text" ng-model="newReport.audio_files.splits.mono_stereo" class="form-control" id="audio_splits_mono_stereo" placeholder="Splits: Mono or Stereo">
+            </div>
+            <div class="form-group">
+                <label for="splits_twelve_frame_mute">Splits: Twelve Frame Mute</label>
+                <input type="text" ng-model="newReport.audio_files.splits.twelve_frame_mute" class="form-control" id="audio_splits_twelve_frame_mute" placeholder="Splits: Twelve Frame Mute">
+            </div>
+            <div class="form-group">
+                <label for="splits_sample_rate">Splits: Sample Rate</label>
+                <input type="text" ng-model="newReport.audio_files.splits.sample_rate" class="form-control" id="audio_splits_sample_rate" placeholder="Splits: Sample Rate">
+            </div>
+            <div class="form-group">
+                <label for="five_one_included">5.1: Included?</label>
+                <input type="text" ng-model="newReport.audio_files.five_one.included" class="form-control" id="audio_five_one_included" placeholder="Five_One: Included?">
+            </div>
+            <div class="form-group">
+                <label for="five_one_mix_twelve_frame_mute">5.1: Twelve Frame Mute</label>
+                <input type="text" ng-model="newReport.audio_files.five_one.twelve_frame_mute" class="form-control" id="audio_five_one_twelve_frame_mute" placeholder="5.1: Twelve Frame Mute">
+            </div>
+            <div class="form-group">
+                <label for="five_one_mix_sample_rate">5.1: Sample Rate</label>
+                <input type="text" ng-model="newReport.audio_files.five_one.sample_rate" class="form-control" id="audio_five_one_sample_rate" placeholder="5.1: Sample Rate">
+            </div>
+            <div class="form-group">
+                <label for="audio_notes">Audio Notes</label>
+                <input type="text" ng-model="newReport.audio_files.notes" class="form-control" id="audio_notes" placeholder="Notes">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="audio_pass_fail">Pass Or Fail</label>
+                <input type="text" ng-model="newReport.audio_files.pass_fail" class="form-control" id="audio_pass_fail" placeholder="Pass Or Fail">
+            </div>
+        </div>
+    </div>
+</div>

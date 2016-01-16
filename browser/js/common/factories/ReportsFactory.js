@@ -2,6 +2,8 @@ app.factory('ReportsFactory', ['$http', function($http) {
     var urlBase = '/api/reports/'
     var reportsFactory = {};
 
+    delete $http.defaults.headers.common['X-Requested-With'];
+
     reportsFactory.getAllReports = function () {
       return $http.get(urlBase).then(function(result){
         return result.data;
@@ -11,6 +13,10 @@ app.factory('ReportsFactory', ['$http', function($http) {
     //createReview
     reportsFactory.createReport = function (report) {
       return $http.post(urlBase + 'create/', report);
+    };
+
+    reportsFactory.getReport = function () {
+      return $http.get(urlBase + 'doc/', {headers: {"Accept": "*/*"}});
     };
 
     //Get a review by product ID

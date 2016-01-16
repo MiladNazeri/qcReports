@@ -1,0 +1,45 @@
+<div ng-show="newReport.assets_expected_for_qc.three_d_project">
+    <h2>3D</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="three_d_job_number">Job Number</label>
+                <input type="text" ng-model="newReport.three_d.job_number" placeholder="Job Number" class="form-control" id="three_d_job_number">
+                <label for="three_d_ae_operator">Operator</label>
+                <input type="text" ng-model="newReport.three_d_operator" placeholder="Operator" class="form-control" id="three_d_operator">
+                <label for="three_d_date">Date</label>
+                <input type="text" ng-model="newReport.three_d.date" placeholder="Date" class="form-control" id="three_d_date">
+                <label for="three_d_are_all_labels_clearly_labeled">Are all Labels Clearly Labeled</label>
+                <input type="text" ng-model="newReport.three_d.are_all_labels_clearly_labeled.yes_no" placeholder="Are all Labels Clearly Labeled" class="form-control" id="three_d_are_all_labels_clearly_labeled">
+                <label for="three_d_are_all_labels_clearly_labeled_notes">Notes</label>
+                <input type="text" ng-model="newReport.three_d.are_all_labels_clearly_labeled.notes" placeholder="Notes" class="form-control" id="three_d_are_all_labels_clearly_labeled">
+                <label for="three_d_are_there_missing_plugins">Are There Missing Plugins</label>
+                <input type="text" ng-model="newReport.three_d.are_there_missing_plugins.yes_no" placeholder="Are There Missing Plugins" class="form-control" id="three_d_are_there_missing_plugins">
+                <label for="three_d_are_there_missing_plugins_notes">Notes</label>
+                <input type="text" ng-model="newReport.three_d.are_there_missing_plugins.notes" placeholder="Notes?" class="form-control" id="three_d_are_there_missing_plugins.notes">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="three_d_are_all_relevant_builds_editable">Are All Relevant Builds Editable?</label>
+            <input type="text" ng-model="newReport.three_d.are_all_relevant_builds_editable.yes_no" placeholder="Are All Relevant Builds Editable?" class="form-control" id="three_d_are_all_relevant_builds_editable">
+            <label for="three_d_are_all_relevant_builds_editable_notes">Notes</label>
+            <input type="text" ng-model="newReport.three_d.are_all_relevant_builds_editable.notes" placeholder="Notes?" class="form-control" id="three_d_are_all_relevant_builds_editable.notes">
+            <label for="three_d_are_there_missing_textures">Are There Missing Textures?</label>
+            <input type="text" ng-model="newReport.three_d.are_there_missing_textures.yes_no" placeholder="Are There Missing Textures?" class="form-control" id="three_d_are_there_missing_textures">
+            <label for="three_d_are_there_missing_textures_notes">Notes</label>
+            <input type="text" ng-model="newReport.three_d.are_there_missing_textures.notes" placeholder="Notes?" class="form-control" id="three_d_are_there_missing_textures.notes">
+            <label for="three_d_frame_rates">Frame Rates?</label>
+            <input type="text" ng-model="newReport.three_d.frame_rates" placeholder="Frame Rates?" class="form-control" id="three_d_frame_rates">
+            <label for="three_d_flame_notes">Notes?</label>
+            <input type="text" ng-model="newReport.three_d.flame.notes" placeholder="Notes?" class="form-control" id="three_d_flame_notes">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="three_d_pass_fail">Pass Or Fail</label>
+                <input type="text" ng-model="newReport.three_d.pass_fail" class="form-control" id="three_d_pass_fail" placeholder="Pass Or Fail">
+            </div>
+        </div>
+    </div>
+</div>

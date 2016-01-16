@@ -10,8 +10,21 @@ app.config(function ($stateProvider) {
 app.controller('NewReportCtrl', function ($scope, $state, ReportsFactory) {
     $scope.newReport = {};
     $scope.addReport = function(){
-        ReportsFactory.createReport($scope.newReport).then(function(){
-            $state.go('home');
-        })
+        ReportsFactory.getReport()
     }
+
+
+        // .then(function(){
+        //     $state.go('home');
+        // })
+
+
 })
+
+// ReportsFactory.createReport($scope.newReport)
+//         .then(function(){
+//             ReportsFactory.getReport()
+//         })
+//         .then(function(data){
+//             console.log(data);
+//         })
