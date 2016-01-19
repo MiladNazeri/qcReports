@@ -7,11 +7,19 @@ app.config(function ($stateProvider) {
     });
 });
 
-app.controller('NewReportCtrl', function ($scope, $state, ReportsFactory) {
+app.controller('NewReportCtrl', function ($scope, $state, ReportsFactory, COUNTRIES) {
+    console.log(COUNTRIES)
+    $scope.countries = COUNTRIES.COUNTRIES;
     $scope.newReport = {};
     $scope.addReport = function(){
         ReportsFactory.getReport()
     }
+
+    // $scope.newReport.audio_files.full_mix.included = false;
+    $scope.$watch('newReport.audio_files.full_mix.included', function() {
+
+       });
+
 
 
         // .then(function(){

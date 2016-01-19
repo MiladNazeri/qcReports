@@ -1,4 +1,6 @@
+
 <div ng-show="newReport.assets_expected_for_qc.video_files">
+<hr />
     <h2>Video</h2>
     <div class="row">
         <div class="col-md-6">
@@ -123,10 +125,10 @@
             <label for="after_effects_pass_fail">Pass Or Fail</label>
             <div class="radio">
                 <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.video_files.pass_fail" name="video_pass_fail" id="video_pass_fail_yes" value="pass" /> Yes
+                    <input type="radio" ng-model="newReport.video_files.pass_fail" name="video_pass_fail" id="video_pass_fail_yes" value="pass" /> Pass
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.video_files.pass_fail" name="video_pass_fail" id="video_pass_fail_no" value="fail" /> No
+                    <input type="radio" ng-model="newReport.video_files.pass_fail" name="video_pass_fail" id="video_pass_fail_no" value="fail" /> Fail
                 </label>
             </div>
         </div>

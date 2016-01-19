@@ -1,0 +1,78 @@
+
+<div ng-show="newReport.assets_expected_for_qc.artwork_pack_shots">
+<hr />
+    <h2>Artwork/Packshots</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="artwork_pack_shots_job_number">Job Number</label>
+                <input type="number" ng-model="newReport.artwork_pack_shots.job_number" placeholder="Job Number" class="form-control" id="artwork_pack_shots_job_number">
+                <label for="artwork_pack_shots_ae_operator">Operator</label>
+                <input type="text" ng-model="newReport.artwork_pack_shots.ae_operator" placeholder="Operator" class="form-control" id="artwork_pack_shots_operator">
+                <label for="artwork_pack_shots_date">Date</label>
+                <input type="date" ng-model="newReport.artwork_pack_shots.date" placeholder="Date" class="form-control" id="artwork_pack_shots_date">
+                <label for="artwork_pack_shots_is_project_organized">Is Project Organized and clearly labeled</label>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.artwork_pack_shots.is_project_organized.yes_no" name="artwork_pack_shots_is_project_organized" id="artwork_pack_shots_is_project_organized_yes" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.artwork_pack_shots.is_project_organized.yes_no" name="artwork_pack_shots_is_project_organized" id="artwork_pack_shots_is_project_organized_no" value="false"> No
+                    </label>
+                </div>
+                <label for="artwork_pack_shots_is_project_organized_notes">Notes</label>
+                <input type="text" ng-model="newReport.artwork_pack_shots.is_project_organized.notes" placeholder="Notes" class="form-control" id="artwork_pack_shots_is_project_organized.notes">
+                <label for="artwork_pack_shots_are_there_correct_files">Do files contain the correct pack-shots or necessary artwork?</label>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.artwork_pack_shots.are_there_correct_files.yes_no" name="artwork_pack_shots_are_there_correct_files" id="artwork_pack_shots_are_there_correct_files_yes" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.artwork_pack_shots.are_there_missing_plugins.yes_no" name="artwork_pack_shots_are_there_correct_files" id="artwork_pack_shots_are_there_correct_files_no" value="false"> No
+                    </label>
+                </div>
+                <label for="artwork_pack_shots_are_there_missing_plugins_notes">Notes</label>
+                <input type="text" ng-model="newReport.artwork_pack_shots.are_there_correct_files.notes" placeholder="Notes" class="form-control" id="artwork_pack_shots_are_there_correct_files_notes">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="artwork_pack_shots_are_all_relevant_comps_editable">Are All Relevant files Editable/Localizable?</label>
+            <div class="radio">
+                <label class="radio-inline">
+                    <input type="radio" ng-model="newReport.artwork_pack_shots.are_all_relevant_comps_editable.yes_no" name="artwork_pack_shots_are_all_relevant_comps_editable" id="artwork_pack_shots_are_all_relevant_comps_editable_yes" value="true"> Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="newReport.artwork_pack_shots.are_all_relevant_comps_editable.yes_no" name="artwork_pack_shots_are_all_relevant_comps_editable" id="artwork_pack_shots_are_all_relevant_comps_editable_no" value="false"> No
+                </label>
+            </div>
+            <label for="artwork_pack_shots_are_all_relevant_comps_editable_notes">Notes</label>
+            <input type="text" ng-model="newReport.artwork_pack_shots.are_all_relevant_comps_editable.notes" placeholder="Notes" class="form-control" id="artwork_pack_shots_are_all_relevant_comps_editable_notes">
+            <label for="artwork_pack_shots_are_there_missing_fonts_yes_no">Are There Missing Fonts?</label>
+               <div class="radio">
+                   <label class="radio-inline">
+                       <input type="radio" ng-model="newReport.artwork_pack_shots.are_there_missing_fonts.yes_no" name="artwork_pack_shots_are_there_missing_fonts_yes_no" id="artwork_pack_shots_are_there_missing_fonts_yes" value="true"> Yes
+                   </label>
+                   <label class="radio-inline">
+                       <input type="radio" ng-model="newReport.artwork_pack_shots.are_there_missing_fonts.yes_no" name="artwork_pack_shots_are_there_missing_fonts_yes_no" id="artwork_pack_shots_are_there_missing_fonts_no" value="false"> No
+                   </label>
+               </div>
+            <label for="artwork_pack_shots_notes">Final Artwork/Packshots Notes</label>
+            <textarea type="text" rows="3" ng-model="newReport.artwork_pack_shots.notes" class="form-control" id="artwork_pack_shots_notes">Notes</textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="artwork_pack_shots_pass_fail">Pass Or Fail</label>
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.artwork_pack_shots.pass_fail" name="artwork_pack_shots_pass_fail" id="artwork_pack_shots_pass_fail_yes" value="pass"> Pass
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.artwork_pack_shots.pass_fail" name="artwork_pack_shots_pass_fail" id="artwork_pack_shots_pass_fail_no" value="fail"> Fail
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

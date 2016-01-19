@@ -8,7 +8,7 @@
             </div>
             <div class="form-group">
                 <label for="project_number">Project Number</label>
-                <input type="text" ng-model="newReport.project_number" class="form-control" id="project_name" placeholder="Project Number" />
+                <input type="number" ng-model="newReport.project_number" class="form-control" id="project_name" placeholder="Project Number" />
             </div>
             <div class="form-group">
                 <label for="hogarth_producer">Hogarth Producer</label>
@@ -19,8 +19,10 @@
                 <input type="text" ng-model="newReport.hogarth_account" class="form-control" id="hogarth_account" placeholder="Hogarth Account Manager" />
             </div>
             <div class="form-group">
-                <label for="intended_markets">Intended Markets</label>
-                <input type="text" ng-model="newReport.intended_markets" class="form-control" id="intended_markets" placeholder="Intended Markets" />
+                <label for="intended_markets">Intended Markets - (CMD/CONTROL Click to Select All That Apply)</label>
+                <select name="intended_markets" id="intended_markets" ng-model="newReport.intended_markets"     multiple class="form-control">
+                  <option ng-repeat="country in countries" value="{{country[1]}}">{{country[0]}} :: {{country[2]}}</option>
+                </select>
             </div>
         </div>
         <div class="col-md-6">
@@ -30,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="arrival_date">Arrival Date</label>
-                <input type="text" ng-model="newReport.arrival_date" class="form-control" id="arrival_date" placeholder="Arrival Date" />
+                <input type="date" ng-model="newReport.arrival_date" class="form-control" id="arrival_date" placeholder="Arrival Date" />
             </div>
             <div class="form-group">
                 <label for="post_house_contact">Post House Contact</label>

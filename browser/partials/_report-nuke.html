@@ -1,20 +1,35 @@
 <div ng-show="newReport.assets_expected_for_qc.nuke_setup">
+    <hr />
     <h2>Nuke</h2>
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
                 <label for="nuke_projects_job_number">Job Number</label>
-                <input type="text" ng-model="newReport.nuke_projects.job_number" class="form-control" id="nuke_projects_job_number" placeholder="Job Number">
+                <input type="number" ng-model="newReport.nuke_projects.job_number" class="form-control" id="nuke_projects_job_number" placeholder="Job Number">
                 <label for="nuke_projects_nuke_operator">Nuke Operator</label>
                 <input type="text" ng-model="newReport.nuke_projects.nuke_operator" class="form-control" id="nuke_projects_nuke_operator" placeholder="Nuke Operator">
                 <label for="nuke_projects_date">Date</label>
-                <input type="text" ng-model="newReport.nuke_projects.date" class="form-control" id="nuke_projects_date" placeholder="Date">
+                <input type="date" ng-model="newReport.nuke_projects.date" class="form-control" id="nuke_projects_date" placeholder="Date">
                 <label for="nuke_projects_are_all_setups_clearly_labeled_yes_no">Are all setups clearly labeld?</label>
-                <input type="text" ng-model="newReport.nuke_projects.are_all_setups_clearly_labeled.yes_no" class="form-control" id="nuke_projects_are_all_setups_clearly_labeled_yes_no" placeholder="Are all setups clearly labeld?">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_all_setups_clearly_labeled.yes_no" name="nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_yes" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_all_setups_clearly_labeled.yes_no" name="nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_no" value="false"> No
+                    </label>
+                </div>
                 <label for="nuke_projects_are_all_setups_clearly_labeled_notes">Notes</label>
                 <input type="text" ng-model="newReport.nuke_projects.are_all_setups_clearly_labeled.notes" class="form-control" id="nuke_projects_are_all_setups_clearly_labeled_notes" placeholder="Notes?">
                 <label for="nuke_projects_are_all_relevant_comps_editable_yes_no">Are all relevant comps editable?</label>
-                <input type="text" ng-model="newReport.nuke_projects.are_all_relevant_comps_editable.yes_no" class="form-control" id="nuke_projects_are_all_relevant_comps_editable_yes_no" placeholder="Are all relevant comps editable?">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_all_relevant_comps_editable.yes_no" name="nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_yes" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_all_relevant_comps_editable.yes_no" name="nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_no" value="false"> No
+                    </label>
+                </div>
                 <label for="nuke_projects_are_all_relevant_comps_editable_notes">Notes</label>
                 <input type="text" ng-model="newReport.nuke_projects.are_all_relevant_comps_editable.notes" class="form-control" id="nuke_projects_are_all_relevant_comps_editable_notes" placeholder="Notes">
             </div>
@@ -22,17 +37,47 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="nuke_projects_are_there_missing_plugins_yes_no">Are There Missing Plugins?</label>
-                <input type="text" ng-model="newReport.nuke_projects.are_there_missing_plugins.yes_no" class="form-control" id="nuke_projects_are_there_missing_plugins_yes_no" placeholder="Are There Missing Plugins?">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_there_missing_plugins.yes_no" name="nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_yes" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_there_missing_plugins.yes_no" name="nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_no" value="false"> No
+                    </label>
+                </div>
                 <label for="nuke_projects_are_there_missing_plugins_notes">Notes</label>
                 <input type="text" ng-model="newReport.nuke_projects.are_there_missing_plugins.notes" class="form-control" id="nuke_projects_are_there_missing_plugins_notes" placeholder="Notes?">
                 <label for="nuke_projects_are_there_missing_fonts_yes_no">Are There Missing Fonts?</label>
-                <input type="text" ng-model="newReport.nuke_projects.are_there_missing_fonts.yes_no" class="form-control" id="nuke_projects_are_there_missing_fonts_yes_no" placeholder="Are There Missing Fonts?">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_there_missing_fonts.yes_no" name="nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_yes" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.are_there_missing_fonts.yes_no" name="nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_no" value="false"> No
+                    </label>
+                </div>
                 <label for="nuke_projects_are_there_missing_fonts_notes">Notes?</label>
                 <input type="text" ng-model="newReport.nuke_projects.are_there_missing_fonts.notes" class="form-control" id="nuke_projects_are_there_missing_fonts_notes" placeholder="Notes?">
                 <label for="nuke_projects_frame_rates">Frame Rates?</label>
-                <input type="text" ng-model="newReport.nuke_projects.frame_rates" placeholder="Frame Rates?" class="form-control" id="nuke_projects_frame_rates">
-                <label for="nuke_projects_notes">Notes</label>
-                <input type="text" ng-model="newReport.nuke_projects.notes" placeholder="Notes" class="form-control" id="nuke_projects_notes">
+                <div class="checkbox">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" ng-model="newReport.nuke_projects.frame_rates.a23967" id="nuke_projects_frame_rates1" value="23.976">23.976
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" ng-model="newReport.nuke_projects.frame_rates.b24" id="nuke_projects_frame_rates2" value="24">24
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" ng-model="newReport.nuke_projects.frame_rates.c25" id="nuke_projects_frame_rates3" value="25">25
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" ng-model="newReport.nuke_projects.frame_rates.d29976" id="nuke_projects_frame_rates4" value="29.976">29.976
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" ng-model="newReport.nuke_projects.frame_rates.other" id="nuke_projects_frame_rates5" value="other">other
+                    </label>
+                </div>
+                <label for="flame_notes">Final Nuke Notes</label>
+                <textarea type="text" rows="3" ng-model="newReport.nuke_projects.notes" class="form-control" id="nuke_projects_notes">Notes</textarea>
             </div>
         </div>
     </div>
@@ -40,8 +85,14 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="nuke_projects_pass_fail">Pass Or Fail</label>
-                <input type="text" ng-model="newReport.nuke_projects.pass_fail" class="form-control" id="nuke_projects_pass_fail" placeholder="Pass Or Fail">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.pass_fail" name="nuke_projects_pass_fail" id="nuke_projects_pass_fail_yes" value="pass"> Pass
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" ng-model="newReport.nuke_projects.pass_fail" name="nuke_projects_pass_fail" id="nuke_projects_pass_fail_no" value="fail"> Fail
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
