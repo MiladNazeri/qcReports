@@ -1,120 +1,120 @@
 <div id="video{{jobNumber}}">
     <div class="row">
         <div class="col-md-12">
-        <h3>JOB#{{jobNumber}} <a ng-click="removeJob( {jobNumber: jobNumber, id: 'video'+jobNumber} )" class="btn btn-danger"><i class="fa fa-minus fa-lg"></i></a></h3>
+            <h3>JOB#{{jobNumber}} <a ng-click="removeJob( {jobNumber: jobNumber, id: 'video'+jobNumber} )" class="btn btn-danger"><i class="fa fa-minus fa-lg"></i></a></h3>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div class="form-group">
-                <label for="qc_operator">QC Operator</label>
-                <input type="text" ng-model="job.qc_operator" class="form-control" id="qc_operator" placeholder="qc_operator" />
-            </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" ng-model="job.date" class="form-control" id="date" placeholder="Date" />
-            </div>
-            <div class="form-group">
-                <label for="total_files_received">Total Files Received</label>
-                <input type="number" ng-model="job.total_files_received" class="form-control" id="total_files_received" placeholder="Total Files Received" />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="qc_operator">QC Operator</label>
+                        <input type="text" ng-model="job.qc_operator" class="form-control" id="qc_operator" placeholder="qc_operator" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="date">Date</label>
+                    <input type="date" ng-model="job.date" class="form-control" id="date" placeholder="Date" />
+                </div>
+                <div class="col-md-4">
+                    <label for="total_files_received">Total Files Received</label>
+                    <input type="number" ng-model="job.total_files_received" class="form-control" id="total_files_received" placeholder="Total Files Received" />
+                </div>
             </div>
             <div class="form-group">
                 <label for="codecs">Codecs</label>
                 <input type="text" ng-model="job.codecs" class="form-control" id="codecs" placeholder="Codecs" />
             </div>
-            <label for="frame_rates">Frame Rates</label>
-            <div class="checkbox">
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.frame_rates.a23967" id="video_files_frame_rates1" value="23.976" />23.976
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.frame_rates.b24" id="video_files_frame_rates2" value="24" />24
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.frame_rates.c25" id="video_files_frame_rates3" value="25" />25
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.frame_rates.d29976" id="video_files_frame_rates4" value="29.976" />29.976
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.frame_rates.other" id="video_files_frame_rates5" value="other" />other
-                </label>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <label for="standards">Standards</label>
-            <div class="checkbox">
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.standards.HD_NTSC" id="video_files_standards1" value="HD NTSC" />HD NTSC
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.standards.SD_NTSC" id="video_files_standards2" value="SD NTSC" />SD NTSC
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.standards.HD_PAL" id="video_files_standards3" value="HD PAL" />HD PAL
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.standards.SD_PAL" id="video_files_standards4" value="SD PAL" />SD PAL
-                </label>
-            </div>
             <div class="form-group">
                 <label for="aspect_ratios">Aspect Ratios</label>
                 <input type="text" ng-model="job.aspect_ratios" class="form-control" id="aspect_ratios" placeholder="Aspect Ratios" />
             </div>
+        </div>
+        <div class="col-md-6">
+
+            <label for="frame_rates">Frame Rates</label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.frame_rates.a23967" id="video_files_frame_rates1" value="23.976" />23.976
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.frame_rates.b24" id="video_files_frame_rates2" value="24" />24
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.frame_rates.c25" id="video_files_frame_rates3" value="25" />25
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.frame_rates.d29976" id="video_files_frame_rates4" value="29.976" />29.976
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.frame_rates.other" id="video_files_frame_rates5" value="other" />other
+            </label>
+            <br/>
+            <label for="standards">Standards</label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.standards.HD_NTSC" id="video_files_standards1" value="HD NTSC" />HD NTSC
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.standards.SD_NTSC" id="video_files_standards2" value="SD NTSC" />SD NTSC
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.standards.HD_PAL" id="video_files_standards3" value="HD PAL" />HD PAL
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.standards.SD_PAL" id="video_files_standards4" value="SD PAL" />SD PAL
+            </label>
+            <br/>
             <label for="durations">Durations</label>
-            <div class="checkbox">
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.a10" id="video_files_durations1" value="10" />10
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.b215" id="video_files_durations2" value="15" />15
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.c20" id="video_files_durations3" value="20" />20
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.d30" id="video_files_durations4" value="30" />30
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.e60" id="video_files_durations5" value="60" />60
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.f90" id="video_files_durations6" value="90" />90
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.durations.other" id="video_files_durations7" value="Other" />Other
-                </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.a10" id="video_files_durations1" value="10" />10
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.b15" id="video_files_durations2" value="15" />15
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.c20" id="video_files_durations3" value="20" />20
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.d30" id="video_files_durations4" value="30" />30
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.e60" id="video_files_durations5" value="60" />60
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.f90" id="video_files_durations6" value="90" />90
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.durations.other" id="video_files_durations7" value="Other" />Other
+            </label>
+            <br/>
+            <div class="form-group" ng-if="job.durations.other">
+                <label for="aspect_ratios">Other Durations:</label>
+                <input type="text" ng-model="job.other_durations" class="form-control" id="aspect_ratios" placeholder="Other Durations" />
             </div>
             <label for="title_safety">Title Safety</label>
-            <div class="checkbox">
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.title_safety.a4x3" id="video_files_standards1" value="HD NTSC" />4X3
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.title_safety.b14x9" id="video_files_standards2" value="SD NTSC" />14X9
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.title_safety.c16x9" id="video_files_standards3" value="HD PAL" />16X9
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.title_safety.other" id="video_files_standards4" value="SD PAL" />Other
-                </label>
-            </div>
-            <label for="title_safety">Master/Generic Included?</label>
-            <div class="form-group">
-                <div class="checkbox">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" ng-model="job.master" id="video_files_master" value="HD NTSC" />Master
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" ng-model="job.generic" id="video_files_generic" value="SD NTSC" />Generic
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" ng-model="job.master_no_legals" id="video_files_master_no_legals" value="HD PAL" />Master No Legals
-                    </label>
-                </div>
-
-            </div>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.title_safety.a4x3" id="video_files_standards1" value="HD NTSC" />4X3
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.title_safety.b14x9" id="video_files_standards2" value="SD NTSC" />14X9
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.title_safety.c16x9" id="video_files_standards3" value="HD PAL" />16X9
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.title_safety.other" id="video_files_standards4" value="SD PAL" />Other
+            </label>
+            <br />
+            <label for="title_safety">Master/Generic?</label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.master" id="video_files_master" value="HD NTSC" />Master
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.generic" id="video_files_generic" value="SD NTSC" />Generic
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" ng-model="job.master_no_legals" id="video_files_master_no_legals" value="HD PAL" />Master No Legals
+            </label>
         </div>
     </div>
     <div class="row">
@@ -122,14 +122,12 @@
             <label for="after_effects_notes">Final Video Notes</label>
             <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="video_notes">Notes</textarea>
             <label for="after_effects_pass_fail">Pass Or Fail</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="video_pass_fail" id="video_pass_fail_yes" value="pass" /> Pass
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="video_pass_fail" id="video_pass_fail_no" value="fail" /> Fail
-                </label>
-            </div>
+            <label class="radio-inline">
+                <input type="radio" ng-model="job.pass_fail" name="video_pass_fail" id="video_pass_fail_yes" value="pass" /> Pass
+            </label>
+            <label class="radio-inline">
+                <input type="radio" ng-model="job.pass_fail" name="video_pass_fail" id="video_pass_fail_no" value="fail" /> Fail
+            </label>
         </div>
     </div>
 </div>

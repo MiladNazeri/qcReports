@@ -4,13 +4,17 @@ app.directive('reportFlame', function ($compile) {
         // scope: {},
         templateUrl: 'partials/_report-flame.html',
         link: function($scope, element, attrs, controller){
+            $scope.removeJob = function(jobNumber, id){
+                console.log("jobNumber",jobNumber)
+                console.log("id",id)
+                delete $scope.newReport.tempflame.jobs[jobNumber];
+                angular.element(document.getElementById(id)).remove()
+
+            }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-            console.log("jobNumber:", jobNumber)
-            $scope.newReport.flame.jobs[jobNumber] = {};
-            $scope.newReport.flame.jobs[jobNumber][versionNumber] = {};
-            angular.element(document.getElementById(id)).append($compile("<report-flame-job job-number=" + jobNumber + " job='newReport.flame.jobs["+jobNumber+"].v001'></report-flame-job>")($scope));
-            $scope.newReport.flame.job_number="";
-            console.log("jobs object", $scope.newReport.flame.jobs)
+                angular.element(document.getElementById(id)).append($compile("<report-flame-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempflame.jobs["+jobNumber+"].v001' ></report-flame-job>")($scope));
+                $scope.newReport.flame.job_number="";
+
             }
         }
     };
@@ -21,7 +25,8 @@ app.directive('reportFlameJob', function () {
         restrict: 'E',
         scope: {
             job: '=',
-            jobNumber: '@'
+            jobNumber: '@',
+            removeJob: '&'
         },
         templateUrl: 'js/common/directives/reports/reportFlameJob.html',
         link: function(scope, element, attrs, controller){

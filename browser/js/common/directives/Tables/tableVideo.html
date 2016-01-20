@@ -1,0 +1,154 @@
+<h2>Video</h2>
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Job Number</th>
+            <th>Version</th>
+            <th>QC Operator</th>
+            <th>Date</th>
+            <th>Total Files Received</th>
+            <th>23.976</th>
+            <th>24</th>
+            <th>25</th>
+            <th>29.976</th>
+            <th>Other</th>
+            <th>SD PAL</th>
+            <th>HD PAL</th>
+            <th>SD NTSC</th>
+            <th>HD NTSC</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+           <td>
+                {{report.jobNumber}}
+            </td>
+            <td>
+                {{version.version}}
+            </td>
+            <td>
+                {{version.qc_operator}}
+            </td>
+            <td>
+                {{version.date}}
+            </td>
+            <td>
+                {{version.total_files_received}}
+            </td>
+            <td>
+                {{version.frame_rates.a23967}}
+            </td>
+            <td>
+                {{version.frame_rates.b24}}
+            </td>
+            <td>
+                {{version.frame_rates.c25}}
+            </td>
+            <td>
+                {{version.frame_rates.d29976}}
+            </td>
+            <td>
+                {{version.frame_rates.other}}
+            </td>
+            <td>
+                {{version.standards.SD_PAL}}
+            </td>
+            <td>
+                {{version.standards.HD_PAL}}
+            </td>
+            <td>
+                {{version.standards.SD_NTSC}}
+            </td>
+            <td>
+                {{version.standards.HD_NTSC}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Aspect Ratios</th>
+            <th>:10</th>
+            <th>:15</th>
+            <th>:20</th>
+            <th>:30</th>
+            <th>:60</th>
+            <th>:90</th>
+            <th>Other</th>
+            <th>Other Duration</th>
+            <th>14X9 Title Safety</th>
+            <th>4X3 Title Safety</th>
+            <th>16X9 Title Safety</th>
+            <th>Other Title Safety</th>
+            <th>Codecs</th>
+            <th>Master</th>
+            <th>Generic</th>
+            <th>Master No Legals</th>
+            <th>Notes</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+           <td>
+                {{version.aspect_ratios}}
+            </td>
+            <td>
+                {{version.durations.a10}}
+            </td>
+            <td>
+                {{version.durations.b15}}
+            </td>
+            <td>
+                {{version.durations.c20}}
+            </td>
+            <td>
+                {{version.durations.d30}}
+            </td>
+            <td>
+                {{version.durations.e60}}
+            </td>
+            <td>
+               {{version.durations.f90}}
+            </td>
+            <td>
+                {{version.durations.other}}
+            </td>
+            <td>
+                {{version.other_durations}}
+            </td>
+            <td>
+                {{version.title_safety.b14x9}}
+            </td>
+            <td>
+                {{version.title_safety.a4x3}}
+            </td>
+            <td>
+                {{version.title_safety.c16x9}}
+            </td>
+            <td>
+                {{version.title_safety.other}}
+            </td>
+            <td>
+                {{version.codecs}}
+            </td>
+            <td>
+                {{version.master}}
+            </td>
+            <td>
+                {{version.generic}}
+            </td>
+            <td>
+                {{version.master_no_legals}}
+            </td>
+            <td>
+                {{version.notes}}
+            </td>
+            <td>
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -58,342 +58,307 @@ var schema = new mongoose.Schema({
             other: {
                 true_false: {
                     type: Boolean
-                },
-                full_detail: {
-                    type: String
                 }
             }
         }
     },
     video_files: [{
-        job_number: {
-            type: Number
-        },
-        qc_operator: {
-            type: String
-        },
-        date: {
-            type: Date
-        },
-        total_files_received: {
-            type: Number
-        },
-        codecs: {
-            type: [String]
-        },
-        frame_rates: {
-            type: [String]
-        },
-        standards: {
-            type: [String]
-        },
-        aspect_ratios: {
-            type: [String]
-        },
-        durations: {
-            type: [Number]
-        },
-        title_safety: {
-            type: [String]
-        },
-        master: {
-            type: Boolean
-        },
-        generic: {
-            type: Boolean
-        },
-        master_no_legals: {
-            type: Boolean
-        },
-        notes: {
-            type: String
-        },
-        pass_fail: {
-            type: String
-        }
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
+            },
+            qc_operator: {
+                type: String
+            },
+            date: {
+                type: Date
+            },
+            total_files_received: {
+                type: Number
+            },
+            frame_rates: {
+                a23967: Boolean,
+                b24: Boolean,
+                c25: Boolean,
+                d29976: Boolean,
+                other: Boolean
+            },
+            standards: {
+                SD_PAL: Boolean,
+                HD_PAL: Boolean,
+                SD_NTSC: Boolean,
+                HD_NTSC: Boolean
+            },
+            aspect_ratios: {
+                type: String
+            },
+            durations: {
+                a10: Boolean,
+                b15: Boolean,
+                c20: Boolean,
+                d30: Boolean,
+                e60: Boolean,
+                f90: Boolean,
+                other: Boolean
+            },
+            other_durations: {
+                type: String
+            },
+            title_safety: {
+                other: Boolean,
+                c16x9: Boolean,
+                b14x9: Boolean,
+                a4x3: Boolean
+            },
+            master: {
+                type: Boolean
+            },
+            generic: {
+                type: Boolean
+            },
+            master_no_legals: {
+                type: Boolean
+            },
+            notes: {
+                type: String
+            },
+            pass_fail: {
+                type: String
+            },
+            codecs: {
+                type: String
+            }
+
+        }]
     }],
-    audio: [{
-        job_number: {
-            type: Number
-        },
-        qc_operator: {
-            type: String
-        },
-        date: {
-            type: [Date]
-        },
-        file_type: {
-            type: String
-        },
-        full_mix: {
-            included: {
-                type: Boolean
+    audio_files: [{
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
             },
-            mono_stereo: {
+            qc_operator: {
                 type: String
             },
-            twelve_frame_mute: {
-                type: Boolean
+            date: {
+                type: Date
             },
-            sample_rate: {
-                type: String
+            splits: {
+                included: Boolean,
+                mono_stereo: String,
+                twelve_frame_mute: Boolean,
+                sample_rate: Number
             },
-        },
-        splits: {
-            included: {
-                type: Boolean
+            five_one: {
+                included: Boolean,
+                mono_stereo: String,
+                twelve_frame_mute: Boolean,
+                sample_rate: String
             },
-            mono_stereo: {
-                type: String
+            full_mix: {
+                included: Boolean,
+                twelve_frame_mute: Boolean,
+                mono_stereo: String,
+                sample_rate: String
             },
-            twelve_frame_mute: {
-                type: Boolean
+            file_type: {
+                wav: Boolean,
+                aiff: Boolean,
+                mp3: Boolean,
+                other: Boolean
             },
-            sample_rate: {
-                type: String
-            },
-        },
-        five_one_mix: {
-            included: {
-                type: Boolean
-            },
-            twelve_frame_mute: {
-                type: Boolean
-            },
-            sample_rate: {
-                type: String
-            },
-        },
-        notes: {
-            type: String
-        },
-        pass_fail: {
-            type: String
-        },
+            notes: String
+        }]
     }],
     after_effects: [{
-        job_number: {
-            type: Number
-        },
-        ae_operator: {
-            type: String
-        },
-        date: {
-            type: Date
-        },
-        is_project_organized: {
-            yes_no:{
-                type: Boolean
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_missing_plugins: {
-            yes_no:{
-                type: Boolean
+            ae_operator: String,
+            date: Date,
+            are_all_relevant_comps_editable: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        are_all_relevant_comps_editable: {
-            yes_no:{
-                type: Boolean
+            are_there_master_conforms: Boolean,
+            are_there_master_renders: Boolean,
+            frame_rates: {
+                other: Boolean,
+                d29976: Boolean,
+                c25: Boolean,
+                b24: Boolean,
+                a23967: Boolean
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_master_conforms: {
-            type: Boolean
-        },
-        are_there_master_renders: {
-            type: Boolean
-        },
-        are_there_generic_renders: {
-            type: Boolean
-        },
-        frame_rates: {
-            type: [String]
-        },
-        pass_fail: {
-            type: Boolean
-        }
+            is_project_organized: {
+                yes_no: Boolean,
+                notes: String
+            },
+            are_there_missing_plugins: {
+                yes_no: Boolean,
+                notes: String
+            },
+            notes: String,
+            pass_fail: String
+        }]
     }],
     flame: [{
-        job_number: {
-            type: Number
-        },
-        flame_operator: {
-            type: String
-        },
-        date: {
-            type: Date
-        },
-        is_project_organized: {
-            yes_no: {
-                type: Boolean
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
             },
-            notes: {
-                type: String
-            }
-        },
-        were_setups_provided: {
-                type: Boolean
+            flame_operator: String,
+            date: Date,
+            are_there_missing_plugins: {
+                yes_no: Boolean,
+                notes: String
             },
-        if_yes_what_format: {
-                type: String
+            are_all_relevant_comps_editable: {
+                yes_no: Boolean,
+                notes: String
             },
-        are_setups_organized: {
-            yes_no: {
-                type: Boolean
+            is_project_organized: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_missing_plugins: {
-            yes_no: {
-                type: Boolean
+            were_setups_provided: Boolean,
+            if_yes_what_format: {
+                tar: Boolean,
+                within: Boolean
             },
-            notes: {
-                type: String
-            }
-        },
-        are_all_relevant_comps_editable: {
-            yes_no: {
-                type: Boolean
+            are_setups_organized: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_master_conforms: {
-            type: Boolean
-        },
-        are_there_master_renders: {
-            type: Boolean
-        },
-        are_there_generic_renders: {
-            type: Boolean
-        },
-        frame_rates: {
-            type: [String]
-        },
-        notes: {
-            type: String
-        },
-        pass_fail: {
-            type: String
-        }
+            are_there_master_conforms: Boolean,
+            are_there_master_renders: Boolean,
+            frame_rates: {
+                a23967: Boolean,
+                b24: Boolean,
+                c25: Boolean,
+                d29976: Boolean,
+                other: Boolean
+            },
+            notes: String,
+            pass_fail: String
+        }]
     }],
-    three_d: {
-        job_number: {
-            type: Number
-        },
-        three_d_operator: {
-            type: String
-        },
-        date: {
-            type: Date
-        },
-        are_all_labels_clearly_labeled: {
-            yes_no: {
-                type: Boolean
+    nuke_projects: [{
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
             },
-            notes: {
-                type: String
-            }
-        },
-        are_all_relevant_builds_editable: {
-            yes_no: {
-                type: Boolean
+            nuke_operator: String,
+            date: Date,
+            are_there_missing_plugins: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_missing_plugins: {
-            yes_no: {
-                type: Boolean
+            are_there_missing_fonts: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_missing_textures: {
-            yes_no: {
-                type: Boolean
+            are_all_setups_clearly_labeled: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        frame_rates: {
-            type: [String]
-        },
-        notes: {
-            type: String
-        },
-        pass_fail: {
-            type: String
-        }
-    },
-    nuke_projects: {
-        job_number: {
-            type: Number
-        },
-        nuke_operator: {
-            type: String
-        },
-        date: {
-            type: Date
-        },
-        are_all_setups_clearly_labeled: {
-            yes_no: {
-                type: Boolean
+            are_all_relevant_comps_editable: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        are_all_relevant_comps_editable: {
-            yes_no: {
-                type: Boolean
+            frame_rates: {
+                a23967: Boolean,
+                b24: Boolean,
+                c25: Boolean,
+                d29976: Boolean,
+                other: Boolean
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_missing_plugins: {
-            yes_no: {
-                type: Boolean
+            notes: String,
+            pass_fail: String
+        }]
+    }],
+    three_d: [{
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
             },
-            notes: {
-                type: String
-            }
-        },
-        are_there_missing_fonts: {
-            yes_no: {
-                type: Boolean
+            operator: String,
+            date: Date,
+            are_there_missing_plugins: {
+                yes_no: Boolean,
+                notes: String
             },
-            notes: {
-                type: String
-            }
-        },
-        frame_rates: {
-            type: [String]
-        },
-        notes: {
-            type: String
-        },
-        pass_fail: {
-            type: String
-        }
-    }
+            are_all_relevant_builds_editable: {
+                yes_no: Boolean,
+                notes: String
+            },
+            are_there_missing_textures: {
+                yes_no: Boolean,
+                notes: String
+            },
+            are_all_labels_clearly_labeled: {
+                yes_no: Boolean,
+                notes: String
+            },
+            three_d_what_3d_program_was_used: String,
+            frame_rates: {
+                a23967: Boolean,
+                b24: Boolean,
+                c25: Boolean,
+                d29976: Boolean,
+                other: Boolean
+            },
+            notes: String,
+            pass_fail: String
+        }]
+    }],
 
-
+    proTools: [{
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
+            },
+            proTools_operator: String,
+            date: Date,
+            are_there_missing_plugins: {
+                yes_no: Boolean,
+                notes: String
+            },
+            is_project_organized: {
+                yes_no: Boolean,
+                notes: String
+            },
+            notes: String,
+            pass_fail: String
+        }]
+    }],
+    other: [{
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
+            },
+            operator: String,
+            date: Date,
+            notes: String,
+            pass_fail: String
+        }]
+    }]
 })
+
 
 mongoose.model('Reports', schema)

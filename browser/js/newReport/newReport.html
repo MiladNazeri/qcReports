@@ -1,16 +1,16 @@
 <div class="container">
     <ng-include src="'/partials/_report-general.html'"></ng-include>
-    <report-video ng-if="newReport.assets_expected_for_qc.video_files"></report-video>
-    <report-audio ng-if="newReport.assets_expected_for_qc.audio_files"></report-audio>
-    <report-after-effects ng-if="newReport.assets_expected_for_qc.after_effects_projects"></report-after-effects>
-    <report-artwork ng-if="newReport.assets_expected_for_qc.artwork_pack_shots"></report-artwork>
-    <report-flame ng-if="newReport.assets_expected_for_qc.flame_archive"></report-flame>
-    <report-nuke ng-if="newReport.assets_expected_for_qc.nuke_setup"></report-nuke>
-    <report-protools ng-if="newReport.assets_expected_for_qc.protools_sessions"></report-protools>
-    <report-three-d ng-if="newReport.assets_expected_for_qc.three_d_project"></report-three-d>
-    <report-other ng-if="newReport.assets_expected_for_qc.other.true_false"></report-other>
+    <report-video ng-if="newReport.general.assets_expected_for_qc.video_files"></report-video>
+    <report-audio ng-if="newReport.general.assets_expected_for_qc.audio_files"></report-audio>
+    <report-after-effects ng-if="newReport.general.assets_expected_for_qc.after_effects_projects"></report-after-effects>
+    <report-artwork ng-if="newReport.general.assets_expected_for_qc.artwork_pack_shots"></report-artwork>
+    <report-flame ng-if="newReport.general.assets_expected_for_qc.flame_archive"></report-flame>
+    <report-nuke ng-if="newReport.general.assets_expected_for_qc.nuke_setup"></report-nuke>
+    <report-protools ng-if="newReport.general.assets_expected_for_qc.protools_sessions"></report-protools>
+    <report-three-d ng-if="newReport.general.assets_expected_for_qc.three_d_project"></report-three-d>
+    <report-other ng-if="newReport.general.assets_expected_for_qc.other.true_false"></report-other>
     <hr />
     <button ng-click="addReport()" type="submit" class="btn btn-default">Submit</button>
 </div>
-<pre>newReport:{{newReport}}</pre>
+<pre>newReport:{{newReport | json:4 }}</pre>
 <hr/>

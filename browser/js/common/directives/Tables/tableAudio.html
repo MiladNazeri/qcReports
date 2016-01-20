@@ -1,0 +1,107 @@
+
+<h2>Audio</h2>
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Job Number</th>
+            <th>Version Number</th>
+            <th>QC Operator</th>
+            <th>Date</th>
+            <th>Splits?</th>
+            <th>Splits M/S</th>
+            <th>Splits 12Frame Mute</th>
+            <th>Splits Sample Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+           <td>
+                {{version.jobNumber}}
+            </td>
+            <td>
+                {{version.version}}
+            </td>
+            <td>
+                {{version.qc_operator}}
+            </td>
+            <td>
+                {{version.date}}
+            </td>
+            <td>
+                {{version.splits.included}}
+            </td>
+            <td>
+                {{version.splits.mono_stereo}}
+            </td>
+            <td>
+               {{version.splits.twelve_frame_mute}}
+            </td>
+            <td>
+                {{version.splits.sample_rate}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>5.1?</th>
+            <th>5.1 M/S</th>
+            <th>5.1 12Frame Mute</th>
+            <th>5.1 Sample Rate</th>
+            <th>Full Mix?</th>
+            <th>Full Mix M/S</th>
+            <th>Full Mix 12Frame Mute</th>
+            <th>Full Mix Sample Rate</th>
+            <th>.WAV</th>
+            <th>.AIFF</th>
+            <th>.MP3</th>
+            <th>Other</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+            <td>
+                {{version.five_one.included}}
+            </td>
+            <td>
+                {{version.five_one.mono_stereo}}
+            </td>
+            <td>
+                {{version.five_one.twelve_frame_mute}}
+            </td>
+            <td>
+                {{version.five_one.sample_rate}}
+            </td>
+            <td>
+                {{version.full_mix.included}}
+            </td>
+            <td>
+                {{version.full_mix.mono_stereo}}
+            </td>
+            <td>
+                {{version.full_mix.twelve_frame_mute}}
+            </td>
+            <td>
+                {{version.full_mix.sample_rate}}
+            </td>
+            <td>
+                {{version.file_type.wav}}
+            </td>
+            <td>
+                {{version.file_type.aiff}}
+            </td>
+            <td>
+                {{version.file_type.mp3}}
+            </td>
+            <td>
+                {{version.file_type.other}}
+            </td>
+            <td>
+                {{version.file_type.notes}}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -4,23 +4,23 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="project_name">Project Name</label>
-                <input type="text" ng-model="newReport.project_name" class="form-control" id="project_name" placeholder="Project Name" />
+                <input type="text" ng-model="newReport.general.project_name" class="form-control" id="project_name" placeholder="Project Name" />
             </div>
             <div class="form-group">
                 <label for="project_number">Project Number</label>
-                <input type="number" ng-model="newReport.project_number" class="form-control" id="project_name" placeholder="Project Number" />
+                <input type="number" ng-model="newReport.general.project_number" class="form-control" id="project_name" placeholder="Project Number" />
             </div>
             <div class="form-group">
                 <label for="hogarth_producer">Hogarth Producer</label>
-                <input type="text" ng-model="newReport.hogarth_producer" class="form-control" id="hogarth_producer" placeholder="Hogarth Producer" />
+                <input type="text" ng-model="newReport.general.hogarth_producer" class="form-control" id="hogarth_producer" placeholder="Hogarth Producer" />
             </div>
             <div class="form-group">
                 <label for="hogarth_account">Hogarth Account Manager</label>
-                <input type="text" ng-model="newReport.hogarth_account" class="form-control" id="hogarth_account" placeholder="Hogarth Account Manager" />
+                <input type="text" ng-model="newReport.general.hogarth_account" class="form-control" id="hogarth_account" placeholder="Hogarth Account Manager" />
             </div>
             <div class="form-group">
                 <label for="intended_markets">Intended Markets - (CMD/CONTROL Click to Select All That Apply)</label>
-                <select name="intended_markets" id="intended_markets" ng-model="newReport.intended_markets"     multiple class="form-control">
+                <select name="intended_markets" id="intended_markets" ng-model="newReport.general.intended_markets"     multiple class="form-control">
                   <option ng-repeat="country in countries" value="{{country[1]}}">{{country[0]}} :: {{country[2]}}</option>
                 </select>
             </div>
@@ -28,19 +28,20 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="delivered_via">Delivered Via</label>
-                <input type="text" ng-model="newReport.delivered_via" class="form-control" id="delivered_via" placeholder="Delivered Via" />
+                <input type="text" ng-model="newReport.general.delivered_via" class="form-control" id="delivered_via" placeholder="Delivered Via" />
             </div>
             <div class="form-group">
                 <label for="arrival_date">Arrival Date</label>
-                <input type="date" ng-model="newReport.arrival_date" class="form-control" id="arrival_date" placeholder="Arrival Date" />
+                <input type="date" ng-model="newReport.general.arrival_date" class="form-control" id="arrival_date" placeholder="Arrival Date" />
             </div>
             <div class="form-group">
                 <label for="post_house_contact">Post House Contact</label>
-                <input type="text" ng-model="newReport.post_house_contact" class="form-control" id="post_house_contact" placeholder="Post House Contact" />
+                <input type="text" ng-model="newReport.general.post_house_contact" class="form-control" id="post_house_contact" placeholder="Post House Contact" />
             </div>
             <div class="form-group">
                 <label for="post_house_address">Post House Address</label>
-                <input type="text" ng-model="newReport.post_house_address" class="form-control" id="post_house_address" placeholder="Post House Address" />
+                <textarea type="text" rows="3" ng-model="newReport.general.post_house_address" class="form-control" id="post_house_address">Notes</textarea>
+
             </div>
         </div>
     </div>
@@ -49,31 +50,31 @@
             <label>Please mark the following items to be QC'd</label>
             <div class="checkbox" id="qcList">
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_video_files" ng-model="newReport.assets_expected_for_qc.video_files" value="true" />Video Files
+                    <input type="checkbox" id="cb_video_files" ng-model="newReport.general.assets_expected_for_qc.video_files" value="true" />Video Files
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_artwork_pack_shots" ng-model="newReport.assets_expected_for_qc.artwork_pack_shots" value="true" />Artwork Pack Shots
+                    <input type="checkbox" id="cb_artwork_pack_shots" ng-model="newReport.general.assets_expected_for_qc.artwork_pack_shots" value="true" />Artwork Pack Shots
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_after_effects_projects" ng-model="newReport.assets_expected_for_qc.after_effects_projects" value="true" />After Effects Projects
+                    <input type="checkbox" id="cb_after_effects_projects" ng-model="newReport.general.assets_expected_for_qc.after_effects_projects" value="true" />After Effects Projects
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_protools_sessions" ng-model="newReport.assets_expected_for_qc.protools_sessions" value="true" />Protools Sessions
+                    <input type="checkbox" id="cb_protools_sessions" ng-model="newReport.general.assets_expected_for_qc.protools_sessions" value="true" />Protools Sessions
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_audio_files" ng-model="newReport.assets_expected_for_qc.audio_files" value="true" />Audio Files
+                    <input type="checkbox" id="cb_audio_files" ng-model="newReport.general.assets_expected_for_qc.audio_files" value="true" />Audio Files
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_flame_archive" ng-model="newReport.assets_expected_for_qc.flame_archive" value="true" />Flame Archive
+                    <input type="checkbox" id="cb_flame_archive" ng-model="newReport.general.assets_expected_for_qc.flame_archive" value="true" />Flame Archive
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_nuke_setup" ng-model="newReport.assets_expected_for_qc.nuke_setup" value="true" />Nuke Setup
+                    <input type="checkbox" id="cb_nuke_setup" ng-model="newReport.general.assets_expected_for_qc.nuke_setup" value="true" />Nuke Setup
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_maya_projects" ng-model="newReport.assets_expected_for_qc.three_d_project" value="true" />3D Projects
+                    <input type="checkbox" id="cb_maya_projects" ng-model="newReport.general.assets_expected_for_qc.three_d_project" value="true" />3D Projects
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" id="cb_other" ng-model="newReport.assets_expected_for_qc.other.true_false" value="true" />Other
+                    <input type="checkbox" id="cb_other" ng-model="newReport.general.assets_expected_for_qc.other.true_false" value="true" />Other
                 </label>
             </div>
         </div>

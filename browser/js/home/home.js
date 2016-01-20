@@ -12,6 +12,8 @@ app.config(function ($stateProvider) {
     });
 });
 
-app.controller('HomeCtrl', function ($scope, $state, reports) {
-    $scope.reports = reports;
+app.controller('HomeCtrl', function ($filter,$scope, $state, reports) {
+    $scope.reports = reports
+    $scope.report = reports[0]
+
 });
