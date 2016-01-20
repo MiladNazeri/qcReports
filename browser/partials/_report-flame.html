@@ -1,137 +1,17 @@
-
-<div ng-show="newReport.assets_expected_for_qc.flame_archive">
+<div>
 <hr />
     <h2>Flame</h2>
     <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="flame_job_number">Job Number</label>
-                <input type="number" ng-model="newReport.flame.job_number" placeholder="Job Number" class="form-control" id="flame_job_number">
-                <label for="flame_operator">Operator</label>
-                <input type="text" ng-model="newReport.flame.flame_operator" placeholder="Operator" class="form-control" id="flame_operator">
-                <label for="flame_date">Date</label>
-                <input type="date" ng-model="newReport.flame.date" placeholder="Date" class="form-control" id="flame_date">
-                <label for="flame_is_project_organized">Is Project Organized</label>
-                <div class="radio">
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.flame.is_project_organized.yes_no" name="flame_is_project_organized" id="flame_is_project_organized_yes" value="true"> Yes
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.flame.is_project_organized.yes_no" name="flame_is_project_organized" id="flame_is_project_organized_no" value="false"> No
-                    </label>
-                </div>
-                <label for="flame_is_project_organized_notes">Notes</label>
-                <input type="text" ng-model="newReport.flame.is_project_organized.notes" placeholder="Notes" class="form-control" id="flame_is_project_organized_notes">
-                <label for="flame_were_setups_provided">Were Setups Provided?</label>
-                <div class="radio">
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.flame.were_setups_provided" name="flame_were_setups_provided" id="flame_were_setups_provided_yes" value="true"> Yes
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.flame.were_setups_provided" name="flame_were_setups_provided" id="flame_were_setups_provided_no" value="false"> No
-                    </label>
-                </div>
-                <div ng-if="newReport.flame.were_setups_provided == 'true'">
-                    <label for="flame_if_yes_what_format">What Format?</label>
-                    <div class="checkbox">
-                        <label class="checkbox-inline">
-                            <input type="radio" ng-model="newReport.flame.if_yes_what_format.tar" name="flame_were_setups_provided" id="flame_if_yes_what_format_tar" value=".tar zip">.tar zip
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="radio" ng-model="newReport.flame.if_yes_what_format.within" name="flame_were_setups_provided" id="flame_if_yes_what_format_within" value="within archive">within archive
-                        </label>
-                    </div>
-                    <label for="flame_are_setups_organized_yes_no">Are Setups Organized?</label>
-                    <div class="radio">
-                        <label class="radio-inline">
-                            <input type="radio" ng-model="newReport.flame.are_setups_organized.yes_no" name="flame_are_setups_organized_yes_no" id="flame_are_setups_organized_yes" value="true"> Yes
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" ng-model="newReport.flame.are_setups_organized.yes_no" name="flame_are_setups_organized_yes_no" id="flame_are_setups_organized_no" value="false"> No
-                        </label>
-                    </div>
-                    <label for="flame_are_setups_organized_notes">Notes?</label>
-                    <input type="text" ng-model="newReport.flame.are_setups_organized.notes" placeholder="Notes?" class="form-control" id="flame_are_setups_organized_notes">
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <label for="flame_are_there_missing_plugins">Are There Missing Plugins?</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_there_missing_plugins.yes_no" name="flame_are_there_missing_plugins" id="flame_are_there_missing_plugins_yes" value="true"> Yes
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_there_missing_plugins.yes_no" name="flame_are_there_missing_plugins" id="flame_are_there_missing_plugins_no" value="false"> No
-                </label>
-            </div>
-            <label for="flame_are_there_missing_plugins_notes">Notes</label>
-            <input type="text" ng-model="newReport.flame_are_there_missing_plugins.notes" placeholder="Notes" class="form-control" id="flame_are_there_missing_plugins_notes">
-            <label for="flame_are_all_relevant_comps_editable">Are All Relevant Comps Editable?</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_all_relevant_comps_editable.yes_no" name="flame_are_all_relevant_comps_editable" id="flame_are_all_relevant_comps_editable_yes" value="true"> Yes
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_all_relevant_comps_editable.yes_no" name="flame_are_all_relevant_comps_editable" id="flame_are_all_relevant_comps_editable_no" value="false"> No
-                </label>
-            </div>
-            <label for="flame_are_all_relevant_comps_editable_notes">Notes</label>
-            <input type="text" ng-model="newReport.flame.are_all_relevant_comps_editable.notes" placeholder="Notes" class="form-control" id="flame_are_all_relevant_comps_editable.notes">
-            <label for="flame_are_there_master_conforms">Are There Master Conforms?</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_there_master_conforms" name="flame_are_there_master_conforms" id="flame_are_there_master_conforms_yes" value="true"> Yes
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_there_master_conforms" name="flame_are_there_master_conforms" id="flame_are_there_master_conforms_no" value="false"> No
-                </label>
-            </div>
-            <label for="flame_are_there_master_renders">Are There Master Renders?</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_there_master_renders" name="flame_are_there_master_renders" id="flame_are_there_master_renders_yes" value="true"> Yes
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.flame.are_there_master_renders" name="flame_are_there_master_renders" id="flame_are_there_master_renders_no" value="false"> No
-                </label>
-            </div>
-            <label for="flame_frame_rates">Frame Rates?</label>
-            <div class="checkbox">
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="newReport.flame.frame_rates.a23967" id="flame_frame_rates1" value="23.976">23.976
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="newReport.flame.frame_rates.b24" id="flame_frame_rates2" value="24">24
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="newReport.flame.frame_rates.c25" id="flame_frame_rates3" value="25">25
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="newReport.flame.frame_rates.d29976" id="flame_frame_rates4" value="29.976">29.976
-                </label>
-                <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="newReport.flame.frame_rates.other" id="flame_frame_rates5" value="other">other
-                </label>
-            </div>
-            <label for="flame_notes">Final Flame Notes</label>
-            <textarea type="text" rows="3" ng-model="newReport.flame.notes" class="form-control" id="flame_notes">Notes</textarea>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-12">
-            <div class="form-group">
-                <label for="flame_pass_fail">Pass Or Fail</label>
-
-                <div class="radio">
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.flame.pass_fail" name="flame_pass_fail" id="flame_pass_fail_yes" value="pass"> Pass
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.flame.pass_fail" name="flame_pass_fail" id="flame_pass_fail_no" value="fail"> Fail
-                    </label>
+            <div id="flame_Jobs"></div>
+            <label for="job_number">Job Number</label>
+            <div class="form-inline">
+                <div class="form-group">
+                    <input type="number" ng-model="newReport.flame.job_number" class="form-control" id="job_number" placeholder="Job Number" />
+                    <a ng-click="addJob(newReport.flame.job_number, 'flame_Jobs', 'flame', 'v001')" class="btn btn-primary"><i class="fa fa-plus fa-lg"></i></a>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

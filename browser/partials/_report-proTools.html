@@ -1,56 +1,17 @@
-
-<div ng-show="newReport.assets_expected_for_qc.proTools_archive">
+<div>
 <hr />
     <h2>Pro Tools</h2>
     <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="proTools_job_number">Job Number</label>
-                <input type="number" ng-model="newReport.proTools.job_number" placeholder="Job Number" class="form-control" id="proTools_job_number">
-                <label for="proTools_operator">Operator</label>
-                <input type="text" ng-model="newReport.proTools.proTools_operator" placeholder="Operator" class="form-control" id="proTools_operator">
-                <label for="proTools_date">Date</label>
-                <input type="date" ng-model="newReport.proTools.date" placeholder="Date" class="form-control" id="proTools_date">
-                <label for="proTools_is_project_organized">Is Project Organized and Clearly Labeled?</label>
-                <div class="radio">
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.proTools.is_project_organized.yes_no" name="proTools_is_project_organized" id="proTools_is_project_organized_yes" value="true"> Yes
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.proTools.is_project_organized.yes_no" name="proTools_is_project_organized" id="proTools_is_project_organized_no" value="false"> No
-                    </label>
-                </div>
-                <label for="proTools_is_project_organized_notes">Notes</label>
-                <input type="text" ng-model="newReport.proTools.is_project_organized.notes" placeholder="Notes" class="form-control" id="proTools_is_project_organized_notes">
-            <label for="proTools_are_there_missing_plugins">Are There Missing Plugins?</label>
-            <div class="radio">
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.proTools.are_there_missing_plugins.yes_no" name="proTools_are_there_missing_plugins" id="proTools_are_there_missing_plugins_yes" value="true"> Yes
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" ng-model="newReport.proTools.are_there_missing_plugins.yes_no" name="proTools_are_there_missing_plugins" id="proTools_are_there_missing_plugins_no" value="false"> No
-                </label>
-            </div>
-            <label for="proTools_are_there_missing_plugins_notes">Notes</label>
-            <input type="text" ng-model="newReport.proTools_are_there_missing_plugins.notes" placeholder="Notes" class="form-control" id="proTools_are_there_missing_plugins_notes">
-            <label for="proTools_notes">Final Pro Tools Notes</label>
-            <textarea type="text" rows="3" ng-model="newReport.proTools.notes" class="form-control" id="proTools_notes">Notes</textarea>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-12">
-            <div class="form-group">
-                <label for="proTools_pass_fail">Pass Or Fail</label>
-
-                <div class="radio">
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.proTools.pass_fail" name="proTools_pass_fail" id="proTools_pass_fail_yes" value="pass"> Pass
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" ng-model="newReport.proTools.pass_fail" name="proTools_pass_fail" id="proTools_pass_fail_no" value="fail"> Fail
-                    </label>
+            <div id="protools_jobs"></div>
+            <label for="job_number">Job Number</label>
+            <div class="form-inline">
+                <div class="form-group">
+                    <input type="number" ng-model="newReport.proTools.job_number" class="form-control" id="job_number" placeholder="Job Number" />
+                    <a ng-click="addJob(newReport.proTools.job_number, 'protools_jobs', 'protools', 'v001')" class="btn btn-primary"><i class="fa fa-plus fa-lg"></i></a>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

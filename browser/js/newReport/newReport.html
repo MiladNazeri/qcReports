@@ -1,16 +1,16 @@
 <div class="container">
     <ng-include src="'/partials/_report-general.html'"></ng-include>
-    <ng-include src="'/partials/_report-video.html'"></ng-include>
-    <ng-include src="'/partials/_report-audio.html'"></ng-include>
-    <ng-include src="'/partials/_report-after-effects.html'"></ng-include>
-    <ng-include src="'/partials/_report-artwork.html'"></ng-include>
-    <ng-include src="'/partials/_report-flame.html'"></ng-include>
-    <ng-include src="'/partials/_report-three-d.html'"></ng-include>
-    <ng-include src="'/partials/_report-nuke.html'"></ng-include>
-    <ng-include src="'/partials/_report-proTools.html'"></ng-include>
-    <ng-include src="'/partials/_report-other.html'"></ng-include>
+    <report-video ng-if="newReport.assets_expected_for_qc.video_files"></report-video>
+    <report-audio ng-if="newReport.assets_expected_for_qc.audio_files"></report-audio>
+    <report-after-effects ng-if="newReport.assets_expected_for_qc.after_effects_projects"></report-after-effects>
+    <report-artwork ng-if="newReport.assets_expected_for_qc.artwork_pack_shots"></report-artwork>
+    <report-flame ng-if="newReport.assets_expected_for_qc.flame_archive"></report-flame>
+    <report-nuke ng-if="newReport.assets_expected_for_qc.nuke_setup"></report-nuke>
+    <report-protools ng-if="newReport.assets_expected_for_qc.protools_sessions"></report-protools>
+    <report-three-d ng-if="newReport.assets_expected_for_qc.three_d_project"></report-three-d>
+    <report-other ng-if="newReport.assets_expected_for_qc.other.true_false"></report-other>
     <hr />
     <button ng-click="addReport()" type="submit" class="btn btn-default">Submit</button>
 </div>
-newReport:{{newReport}}
+<pre>newReport:{{newReport}}</pre>
 <hr/>
