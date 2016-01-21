@@ -19,18 +19,18 @@
                 </div>
                 <label for="after_effects_is_project_organized">Is Project Organized</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.is_project_organized.yes_no" name="after_effects_is_project_organized" id="after_effects_is_project_organized_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.is_project_organized.yes_no" name="{{jobNumber}}after_effects_is_project_organized" id="after_effects_is_project_organized_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.is_project_organized.yes_no" name="after_effects_is_project_organized" id="after_effects_is_project_organized_no" value="false"> No
+                    <input type="radio" ng-model="job.is_project_organized.yes_no" name="{{jobNumber}}after_effects_is_project_organized" id="after_effects_is_project_organized_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.is_project_organized.notes" placeholder="Notes" class="form-control" id="after_effects_is_project_organized.notes">
                 <label for="after_effects_are_there_missing_plugins">Are there Missing Plugins?</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="after_effects_are_there_missing_plugins" id="after_effects_are_there_missing_plugins_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}after_effects_are_there_missing_plugins" id="after_effects_are_there_missing_plugins_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="after_effects_are_there_missing_plugins" id="after_effects_are_there_missing_plugins_no" value="false"> No
+                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}after_effects_are_there_missing_plugins" id="after_effects_are_there_missing_plugins_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.are_there_missing_plugins.notes" placeholder="Notes" class="form-control" id="after_effects_are_there_missing_plugins_notes">
             </div>
@@ -38,26 +38,26 @@
         <div class="col-md-6">
             <label for="after_effects_are_all_relevant_comps_editable">Are All Relevant Comps Editable?</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="after_effects_are_all_relevant_comps_editable" id="after_effects_are_all_relevant_comps_editable_yes" value="true"> Yes
+                <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="{{jobNumber}}after_effects_are_all_relevant_comps_editable" id="after_effects_are_all_relevant_comps_editable_yes" value="true"> Yes
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="after_effects_are_all_relevant_comps_editable" id="after_effects_are_all_relevant_comps_editable_no" value="false"> No
+                <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="{{jobNumber}}after_effects_are_all_relevant_comps_editable" id="after_effects_are_all_relevant_comps_editable_no" value="false"> No
             </label>
             <input type="text" ng-model="job.are_all_relevant_comps_editable.notes" placeholder="Notes" class="form-control" id="after_effects_are_all_relevant_comps_editable_notes">
             <label for="after_effects_are_there_master_conforms">Are There Master Conforms?</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_master_conforms" name="after_effects_are_there_master_conforms" id="after_effects_are_there_master_conforms_yes" value="true"> Yes
+                <input type="radio" ng-model="job.are_there_master_conforms" name="{{jobNumber}}after_effects_are_there_master_conforms" id="after_effects_are_there_master_conforms_yes" value="true"> Yes
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_master_conforms" name="after_effects_are_there_master_conforms" id="after_effects_are_there_master_conforms_no" value="false"> No
+                <input type="radio" ng-model="job.are_there_master_conforms" name="{{jobNumber}}after_effects_are_there_master_conforms" id="after_effects_are_there_master_conforms_no" value="false"> No
             </label>
             <br />
             <label for="after_effects_are_there_master_renders">Are There Master Renders?</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_master_renders" name="after_effects_are_there_master_renders" id="after_effects_are_there_master_renders_yes" value="true"> Yes
+                <input type="radio" ng-model="job.are_there_master_renders" name="{{jobNumber}}after_effects_are_there_master_renders" id="after_effects_are_there_master_renders_yes" value="true"> Yes
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_master_renders" name="after_effects_are_there_master_renders" id="after_effects_are_there_master_renders_no" value="false"> No
+                <input type="radio" ng-model="job.are_there_master_renders" name="{{jobNumber}}after_effects_are_there_master_renders" id="after_effects_are_there_master_renders_no" value="false"> No
             </label>
             <br />
             <label for="after_effects_frame_rates">Frame Rates?</label>
@@ -85,10 +85,10 @@
                 <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="after_effects_notes">Notes</textarea>
                 <label for="after_effects_pass_fail">Pass Or Fail</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="after_effects_pass_fail" id="after_effects_pass_fail_yes" value="pass"> Pass
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}after_effects_pass_fail" id="after_effects_pass_fail_yes" value="pass"> Pass
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="after_effects_pass_fail" id="after_effects_pass_fail_no" value="fail"> Fail
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}after_effects_pass_fail" id="after_effects_pass_fail_no" value="fail"> Fail
                 </label>
             </div>
         </div>

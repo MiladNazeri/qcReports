@@ -13,7 +13,7 @@ app.directive('reportAudio', function ($compile) {
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-audio-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempaudio_files.jobs["+jobNumber+"].v001' ></report-audio-job>")($scope));
+                angular.element(document.getElementById(id)).append($compile("<report-audio-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempaudio_files.jobs["+jobNumber+"]' ></report-audio-job>")($scope));
                 $scope.newReport.audio_files.job_number="";
                 console.log("jobs object", $scope.newReport.audio_files.jobs)
             }

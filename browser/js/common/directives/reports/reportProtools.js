@@ -13,7 +13,7 @@ app.directive('reportProtools', function ($compile) {
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-protools-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempproTools.jobs["+jobNumber+"].v001' ></report-protools-job>")($scope));
+                angular.element(document.getElementById(id)).append($compile("<report-protools-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempproTools.jobs["+jobNumber+"]' ></report-protools-job>")($scope));
                 $scope.newReport.proTools.job_number="";
 
             }

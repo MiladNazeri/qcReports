@@ -150,7 +150,7 @@ var schema = new mongoose.Schema({
                 included: Boolean,
                 mono_stereo: String,
                 twelve_frame_mute: Boolean,
-                sample_rate: Number
+                sample_rate: String
             },
             five_one: {
                 included: Boolean,
@@ -200,6 +200,35 @@ var schema = new mongoose.Schema({
                 notes: String
             },
             are_there_missing_plugins: {
+                yes_no: Boolean,
+                notes: String
+            },
+            notes: String,
+            pass_fail: String
+        }]
+    }],
+    artwork_pack_shots: [{
+        jobNumber: Number,
+        report: [{
+            version: {
+                type: Number,
+                default: 1,
+            },
+            operator: String,
+            date: Date,
+            is_project_organized: {
+                yes_no: Boolean,
+                notes: String
+            },
+            are_there_correct_files: {
+                yes_no: Boolean,
+                notes: String
+            },
+            are_all_relevant_comps_editable: {
+                yes_no: Boolean,
+                notes: String
+            },
+            are_there_missing_fonts: {
                 yes_no: Boolean,
                 notes: String
             },

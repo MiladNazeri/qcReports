@@ -1,0 +1,79 @@
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Job Number</th>
+            <th>Version Number</th>
+            <th>QC Operator</th>
+            <th>Date</th>
+            <th>Is Project Organized?</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+           <td>
+                {{report.jobNumber}}
+            </td>
+            <td>
+                {{version.version}}
+            </td>
+            <td>
+                {{version.operator}}
+            </td>
+            <td>
+                {{version.date}}
+            </td>
+            <td>
+                {{version.is_project_organized.yes_no}}
+            </td>
+            <td>
+                {{version.is_project_organized.notes}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Correct Files?</th>
+            <th>Notes</th>
+            <th>Editable Comps?</th>
+            <th>Notes</th>
+            <th>Missing Fonts?</th>
+            <th>Notes</th>
+            <th>Final Artwork Notes</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+            <td>
+               {{version.are_there_correct_files.yes_no}}
+            </td>
+            <td>
+                {{version.are_there_correct_files.notes}}
+            </td>
+            <td>
+               {{version.are_all_relevant_comps_editable.yes_no}}
+            </td>
+            <td>
+                {{version.are_all_relevant_comps_editable.notes}}
+            </td>
+            <td>
+               {{version.are_there_missing_fonts.yes_no}}
+            </td>
+            <td>
+                {{version.are_there_missing_fonts.notes}}
+            </td>
+            <td>
+               {{version.notes}}
+            </td>
+            <td>
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

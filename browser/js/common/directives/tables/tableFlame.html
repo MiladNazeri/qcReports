@@ -1,0 +1,118 @@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Job Number</th>
+            <th>Version Number</th>
+            <th>Flame Operator</th>
+            <th>Date?</th>
+            <th>missing plugins?</th>
+            <th>Notes?</th>
+            <th>comps editable?</th>
+            <th>Notes</th>
+            <th>project organized?</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+           <td>
+                {{report.jobNumber}}
+            </td>
+            <td>
+                {{version.version}}
+            </td>
+            <td>
+                {{version.flame_operator}}
+            </td>
+            <td>
+                {{version.date}}
+            </td>
+            <td>
+                {{version.are_there_missing_plugins.yes_no}}
+            </td>
+            <td>
+                {{version.are_there_missing_plugins.notes}}
+            </td>
+            <td>
+               {{version.are_all_relevant_comps_editable.yes_no}}
+            </td>
+            <td>
+                {{version.are_all_relevant_comps_editable.notes}}
+            </td>
+            <td>
+                {{version.is_project_organized.yes_no}}
+            </td>
+            <td>
+                {{version.is_project_organized.notes}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>setups provided?</th>
+            <th>Tar?</th>
+            <th>Within?</th>
+            <th>Setups Organized?</th>
+            <th>Notes?</th>
+            <th>Master Conforms?</th>
+            <th>Master Renders?</th>
+            <th>23.976</th>
+            <th>24</th>
+            <th>25</th>
+            <th>29.976</th>
+            <th>Other</th>
+            <th>Notes</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+            <td>
+                {{version.were_setups_provided}}
+            </td>
+            <td>
+                {{version.if_yes_what_format.tar}}
+            </td>
+            <td>
+                {{version.if_yes_what_format.within}}
+            </td>
+            <td>
+                {{version.are_setups_organized.yes_no}}
+            </td>
+            <td>
+                {{version.are_setups_organized.notes}}
+            </td>
+            <td>
+                {{version.are_there_master_conforms}}
+            </td>
+            <td>
+                {{version.are_there_master_renders}}
+            </td>
+            <td>
+                {{version.frame_rates.a23967}}
+            </td>
+            <td>
+                {{version.frame_rates.b24}}
+            </td>
+            <td>
+                {{version.frame_rates.c25}}
+            </td>
+            <td>
+                {{version.frame_rates.d29976}}
+            </td>
+            <td>
+                {{version.frame_rates.other}}
+            </td>
+            <td>
+                {{version.notes}}
+            </td>
+            <td>
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

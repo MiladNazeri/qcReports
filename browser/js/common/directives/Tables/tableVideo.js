@@ -1,7 +1,7 @@
 app.directive('tableVideo', function () {
     return {
         restrict: 'E',
-        templateUrl: 'js/common/directives/Tables/tableVideo.html',
+        templateUrl: 'js/common/directives/tables/tableVideo.html',
         scope: {
             report: '='
         },

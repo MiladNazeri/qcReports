@@ -1,7 +1,7 @@
-app.directive('tableAudio', function () {
+app.directive('tableNuke', function () {
     return {
         restrict: 'E',
-        templateUrl: 'js/common/directives/tables/tableAudio.html',
+        templateUrl: 'js/common/directives/tables/tableNuke.html',
         scope: {
             report: '='
         },

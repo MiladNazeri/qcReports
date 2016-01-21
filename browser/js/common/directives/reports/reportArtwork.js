@@ -12,7 +12,7 @@ app.directive('reportArtwork', function ($compile) {
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-artwork-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempartwork_pack_shots.jobs["+jobNumber+"].v001' ></report-artwork-job>")($scope));
+                angular.element(document.getElementById(id)).append($compile("<report-artwork-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempartwork_pack_shots.jobs["+jobNumber+"]' ></report-artwork-job>")($scope));
                 $scope.newReport.artwork_pack_shots.job_number="";
 
             }

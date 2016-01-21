@@ -12,7 +12,7 @@ app.directive('reportOther', function ($compile) {
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-other-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempother.jobs["+jobNumber+"].v001' ></report-other-job>")($scope));
+                angular.element(document.getElementById(id)).append($compile("<report-other-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempother.jobs["+jobNumber+"]' ></report-other-job>")($scope));
                 $scope.newReport.other.job_number="";
 
             }

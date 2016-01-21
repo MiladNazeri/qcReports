@@ -15,5 +15,6 @@ app.config(function ($stateProvider) {
 app.controller('HomeCtrl', function ($filter,$scope, $state, reports) {
     $scope.reports = reports
     $scope.report = reports[0]
+    console.log($scope.report)
 
 });

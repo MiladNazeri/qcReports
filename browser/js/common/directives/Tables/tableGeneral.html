@@ -1,5 +1,5 @@
-<h2>General</h2>
-<table class="table table-condensed">
+
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Hogarth Producer</th>
@@ -43,5 +43,54 @@
                 {{report.general.post_house_address}}
             </td>
         </tr>
+    </tbody>
+</table>
+
+<h2>Assets Included</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Assets for Video Files</th>
+            <th>Assets for Artwork/Pack Shots</th>
+            <th>Assets for After Effects Projects</th>
+            <th>Assets for Protools Sessions</th>
+            <th>Assets for Audio Files</th>
+            <th>Assets for Flame Archives</th>
+            <th>Assets for Nuke Setups</th>
+            <th>Assets for 3D Projects</th>
+            <th>Assets for Other Files</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+           <td>
+                {{report.general.assets_expected_for_qc.video_files}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.artwork_pack_shots}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.after_effects_projects}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.protools_sessions}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.audio_files}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.flame_archive}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.nuke_setup}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.three_d_projects}}
+            </td>
+            <td>
+                {{report.general.assets_expected_for_qc.other.true_false}}
+            </td>
+        </tr>
+
     </tbody>
 </table>

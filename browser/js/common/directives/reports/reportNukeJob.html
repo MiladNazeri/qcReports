@@ -19,18 +19,18 @@
                 </div>
                 <label for="nuke_projects_are_all_setups_clearly_labeled_yes_no">Are all setups clearly labeld?</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_all_setups_clearly_labeled.yes_no" name="nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.are_all_setups_clearly_labeled.yes_no" name="{{jobNumber}}nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_all_setups_clearly_labeled.yes_no" name="nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_no" value="false"> No
+                    <input type="radio" ng-model="job.are_all_setups_clearly_labeled.yes_no" name="{{jobNumber}}nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.are_all_setups_clearly_labeled.notes" class="form-control" id="nuke_projects_are_all_setups_clearly_labeled_notes" placeholder="Notes?">
                 <label for="nuke_projects_are_all_relevant_comps_editable_yes_no">Are all relevant comps editable?</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="{{jobNumber}}nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_no" value="false"> No
+                    <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="{{jobNumber}}nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.are_all_relevant_comps_editable.notes" class="form-control" id="nuke_projects_are_all_relevant_comps_editable_notes" placeholder="Notes">
             </div>
@@ -39,18 +39,18 @@
             <div class="form-group">
                 <label for="nuke_projects_are_there_missing_plugins_yes_no">Are There Missing Plugins?</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_no" value="false"> No
+                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.are_there_missing_plugins.notes" class="form-control" id="nuke_projects_are_there_missing_plugins_notes" placeholder="Notes?">
                 <label for="nuke_projects_are_there_missing_fonts_yes_no">Are There Missing Fonts?</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_there_missing_fonts.yes_no" name="nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.are_there_missing_fonts.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_there_missing_fonts.yes_no" name="nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_no" value="false"> No
+                    <input type="radio" ng-model="job.are_there_missing_fonts.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.are_there_missing_fonts.notes" class="form-control" id="nuke_projects_are_there_missing_fonts_notes" placeholder="Notes?">
                 <label for="nuke_projects_frame_rates">Frame Rates?</label>
@@ -79,10 +79,10 @@
                 <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="nuke_projects_notes">Notes</textarea>
                 <label for="nuke_projects_pass_fail">Pass Or Fail</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="nuke_projects_pass_fail" id="nuke_projects_pass_fail_yes" value="pass"> Pass
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}nuke_projects_pass_fail" id="nuke_projects_pass_fail_yes" value="pass"> Pass
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="nuke_projects_pass_fail" id="nuke_projects_pass_fail_no" value="fail"> Fail
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}nuke_projects_pass_fail" id="nuke_projects_pass_fail_no" value="fail"> Fail
                 </label>
             </div>
         </div>

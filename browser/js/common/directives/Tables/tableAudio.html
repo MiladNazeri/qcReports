@@ -1,6 +1,6 @@
 
-<h2>Audio</h2>
-<table class="table table-condensed">
+
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Job Number</th>
@@ -16,7 +16,7 @@
     <tbody>
         <tr ng-repeat="version in report.report">
            <td>
-                {{version.jobNumber}}
+                {{report.jobNumber}}
             </td>
             <td>
                 {{version.version}}
@@ -43,7 +43,7 @@
     </tbody>
 </table>
 
-<table class="table table-condensed">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>5.1?</th>

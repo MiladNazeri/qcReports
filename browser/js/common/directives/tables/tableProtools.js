@@ -1,7 +1,7 @@
-app.directive('tableAudio', function () {
+app.directive('tableProtools', function () {
     return {
         restrict: 'E',
-        templateUrl: 'js/common/directives/tables/tableAudio.html',
+        templateUrl: 'js/common/directives/tables/tableProtools.html',
         scope: {
             report: '='
         },

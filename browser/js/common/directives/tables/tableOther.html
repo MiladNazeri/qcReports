@@ -1,0 +1,47 @@
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <th>Job Number</th>
+            <td ng-repeat="version in report.report">
+                 {{report.jobNumber}}
+             </td>
+        </tr>
+        <tr >
+            <th>Version Number</th>
+            <td ng-repeat="version in report.report">
+                {{version.version}}
+            </td>
+        </tr>
+        <tr >
+            <th>Operator</th>
+            <td ng-repeat="version in report.report">
+                {{version.operator}}
+            </td>
+        </tr>
+        <tr >
+            <th>Date?</th>
+            <td ng-repeat="version in report.report">
+                {{version.date}}
+            </td>
+        </tr>
+        <tr >
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.notes}}
+            </td>
+        </tr>
+        <tr >
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

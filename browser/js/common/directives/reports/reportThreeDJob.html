@@ -21,10 +21,10 @@
                 <input type="text" ng-model="job.three_d_what_3d_program_was_used" placeholder="What 3D Program Was Used?" class="form-control" id="three_d_what_3d_program_was_used">
                 <label for="three_d_are_all_labels_clearly_labeled">Are all Labels Clearly Labeled</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_all_labels_clearly_labeled.yes_no" name="three_d_are_all_labels_clearly_labeled" id="three_d_are_all_labels_clearly_labeled_yes" value="true"> Yes
+                    <input type="radio" ng-model="job.are_all_labels_clearly_labeled.yes_no" name="{{jobNumber}}three_d_are_all_labels_clearly_labeled" id="three_d_are_all_labels_clearly_labeled_yes" value="true"> Yes
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.are_all_labels_clearly_labeled.yes_no" name="three_d_are_all_labels_clearly_labeled" id="three_d_are_all_labels_clearly_labeled_no" value="false"> No
+                    <input type="radio" ng-model="job.are_all_labels_clearly_labeled.yes_no" name="{{jobNumber}}three_d_are_all_labels_clearly_labeled" id="three_d_are_all_labels_clearly_labeled_no" value="false"> No
                 </label>
                 <input type="text" ng-model="job.are_all_labels_clearly_labeled.notes" placeholder="Notes" class="form-control" id="three_d_are_all_labels_clearly_labeled">
 
@@ -33,26 +33,26 @@
         <div class="col-md-6">
             <label for="three_d_are_there_missing_plugins">Are There Missing Plugins</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="three_d_are_there_missing_plugins" id="three_d_are_there_missing_plugins_yes" value="true"> Yes
+                <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}three_d_are_there_missing_plugins" id="three_d_are_there_missing_plugins_yes" value="true"> Yes
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="three_d_are_there_missing_plugins" id="three_d_are_there_missing_plugins_no" value="false"> No
+                <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}three_d_are_there_missing_plugins" id="three_d_are_there_missing_plugins_no" value="false"> No
             </label>
             <input type="text" ng-model="job.are_there_missing_plugins.notes" placeholder="Notes?" class="form-control" id="three_d_are_there_missing_plugins.notes">
             <label for="three_d_are_all_relevant_builds_editable">Are All Relevant Builds Editable?</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_all_relevant_builds_editable.yes_no" name="three_d_are_all_relevant_builds_editable" id="three_d_are_all_relevant_builds_editable_yes" value="true"> Yes
+                <input type="radio" ng-model="job.are_all_relevant_builds_editable.yes_no" name="{{jobNumber}}three_d_are_all_relevant_builds_editable" id="three_d_are_all_relevant_builds_editable_yes" value="true"> Yes
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_all_relevant_builds_editable.yes_no" name="three_d_are_all_relevant_builds_editable" id="three_d_are_all_relevant_builds_editable_no" value="false"> No
+                <input type="radio" ng-model="job.are_all_relevant_builds_editable.yes_no" name="{{jobNumber}}three_d_are_all_relevant_builds_editable" id="three_d_are_all_relevant_builds_editable_no" value="false"> No
             </label>
             <input type="text" ng-model="job.are_all_relevant_builds_editable.notes" placeholder="Notes?" class="form-control" id="three_d_are_all_relevant_builds_editable.notes">
             <label for="three_d_are_there_missing_textures">Are There Missing Textures?</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_missing_textures.yes_no" name="three_d_are_there_missing_textures" id="three_d_are_there_missing_textures_yes" value="true"> Yes
+                <input type="radio" ng-model="job.are_there_missing_textures.yes_no" name="{{jobNumber}}three_d_are_there_missing_textures" id="three_d_are_there_missing_textures_yes" value="true"> Yes
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.are_there_missing_textures.yes_no" name="three_d_are_there_missing_textures" id="three_d_are_there_missing_textures_no" value="false"> No
+                <input type="radio" ng-model="job.are_there_missing_textures.yes_no" name="{{jobNumber}}three_d_are_there_missing_textures" id="three_d_are_there_missing_textures_no" value="false"> No
             </label>
             <input type="text" ng-model="job.are_there_missing_textures.notes" placeholder="Notes?" class="form-control" id="three_d_are_there_missing_textures.notes">
             <label for="three_d_frame_rates">Frame Rates?</label>
@@ -80,10 +80,10 @@
                 <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="video_notes">Notes</textarea>
                 <label for="three_d_pass_fail">Pass Or Fail</label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="three_d_pass_fail" id="three_d_pass_fail_yes" value="pass" /> Pass
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}three_d_pass_fail" id="three_d_pass_fail_yes" value="pass" /> Pass
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" ng-model="job.pass_fail" name="three_d_pass_fail" id="three_d_pass_fail_no" value="fail" /> Fail
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}three_d_pass_fail" id="three_d_pass_fail_no" value="fail" /> Fail
                 </label>
             </div>
         </div>

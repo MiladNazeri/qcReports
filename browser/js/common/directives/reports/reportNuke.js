@@ -13,7 +13,7 @@ app.directive('reportNuke', function($compile) {
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber) {
 
-                angular.element(document.getElementById(id)).append($compile("<report-nuke-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempnuke_projects.jobs[" + jobNumber + "].v001' ></report-nuke-job>")($scope));
+                angular.element(document.getElementById(id)).append($compile("<report-nuke-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempnuke_projects.jobs["+jobNumber+"]' ></report-nuke-job>")($scope));
                 $scope.newReport.nuke_projects.job_number = "";
 
             }

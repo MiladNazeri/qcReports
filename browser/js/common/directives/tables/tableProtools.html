@@ -1,0 +1,51 @@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Job Number</th>
+            <th>Version Number</th>
+            <th>Pro Tools Operator</th>
+            <th>Date?</th>
+            <th>Missing Plugins?</th>
+            <th>Notes?</th>
+            <th>Project Organized?</th>
+            <th>Notes</th>
+            <th>Notes</th>
+            <th>Pass/Fail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+           <td>
+                {{report.jobNumber}}
+            </td>
+            <td>
+                {{version.version}}
+            </td>
+            <td>
+                {{version.proTools_operator}}
+            </td>
+            <td>
+                {{version.date}}
+            </td>
+            <td>
+                {{version.are_there_missing_plugins.yes_no}}
+            </td>
+            <td>
+                {{version.are_there_missing_plugins.notes}}
+            </td>
+            <td>
+               {{version.is_project_organized.yes_no}}
+            </td>
+            <td>
+                {{version.is_project_organized.notes}}
+            </td>
+            <td>
+                {{version.notes}}
+            </td>
+            <td>
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -123,10 +123,10 @@
             <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="video_notes">Notes</textarea>
             <label for="after_effects_pass_fail">Pass Or Fail</label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.pass_fail" name="video_pass_fail" id="video_pass_fail_yes" value="pass" /> Pass
+                <input type="radio" ng-model="job.pass_fail" name="video{{jobNumber}}_pass_fail" id="video_pass_fail_yes" value="pass" /> Pass
             </label>
             <label class="radio-inline">
-                <input type="radio" ng-model="job.pass_fail" name="video_pass_fail" id="video_pass_fail_no" value="fail" /> Fail
+                <input type="radio" ng-model="job.pass_fail" name="video{{jobNumber}}_pass_fail" id="video_pass_fail_no" value="fail" /> Fail
             </label>
         </div>
     </div>

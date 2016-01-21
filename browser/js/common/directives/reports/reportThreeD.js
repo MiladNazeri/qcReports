@@ -13,7 +13,7 @@ app.directive('reportThreeD', function ($compile) {
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-three-d-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempthree_d.jobs["+jobNumber+"].v001' ></report-three-d-job>")($scope));
+                angular.element(document.getElementById(id)).append($compile("<report-three-d-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempthree_d.jobs["+jobNumber+"]' ></report-three-d-job>")($scope));
                 $scope.newReport.three_d.job_number="";
             }
         }
