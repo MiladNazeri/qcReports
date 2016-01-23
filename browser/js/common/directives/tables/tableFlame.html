@@ -1,118 +1,126 @@
-
-<table class="table table-bordered">
-    <thead>
+<table class="table table-striped">
+    <tbody>
         <tr>
             <th>Job Number</th>
-            <th>Version Number</th>
-            <th>Flame Operator</th>
-            <th>Date?</th>
-            <th>missing plugins?</th>
-            <th>Notes?</th>
-            <th>comps editable?</th>
-            <th>Notes</th>
-            <th>project organized?</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="version in report.report">
-           <td>
+            <td ng-repeat="version in report.report">
                 {{report.jobNumber}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Version Number</th>
+            <td ng-repeat="version in report.report">
                 {{version.version}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Flame Operator</th>
+            <td ng-repeat="version in report.report">
                 {{version.flame_operator}}
             </td>
-            <td>
-                {{version.date}}
+        </tr>
+        <tr>
+            <th>Date?</th>
+            <td ng-repeat="version in report.report">
+                {{version.date  | date:'yyyy-MM-dd'}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>missing plugins?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_missing_plugins.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_missing_plugins.notes}}
             </td>
-            <td>
-               {{version.are_all_relevant_comps_editable.yes_no}}
+        </tr>
+        <tr>
+            <th>comps editable?</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_all_relevant_comps_editable.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_all_relevant_comps_editable.notes}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>project organized?</th>
+            <td ng-repeat="version in report.report">
                 {{version.is_project_organized.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.is_project_organized.notes}}
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table class="table table-bordered">
-    <thead>
         <tr>
             <th>setups provided?</th>
-            <th>Tar?</th>
-            <th>Within?</th>
-            <th>Setups Organized?</th>
-            <th>Notes?</th>
-            <th>Master Conforms?</th>
-            <th>Master Renders?</th>
-            <th>23.976</th>
-            <th>24</th>
-            <th>25</th>
-            <th>29.976</th>
-            <th>Other</th>
-            <th>Notes</th>
-            <th>Pass/Fail</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="version in report.report">
-            <td>
+            <td ng-repeat="version in report.report">
                 {{version.were_setups_provided}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Tar?</th>
+            <td ng-repeat="version in report.report">
                 {{version.if_yes_what_format.tar}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Within?</th>
+            <td ng-repeat="version in report.report">
                 {{version.if_yes_what_format.within}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Setups Organized?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_setups_organized.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_setups_organized.notes}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Master Conforms?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_master_conforms}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Master Renders?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_master_renders}}
             </td>
-            <td>
-                {{version.frame_rates.a23967}}
+        </tr>
+        <tr>
+            <th>Frame Rates</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="fr in version.frame_rates">{{fr}}{{$last ? " " : " / "}}</span>
             </td>
-            <td>
-                {{version.frame_rates.b24}}
-            </td>
-            <td>
-                {{version.frame_rates.c25}}
-            </td>
-            <td>
-                {{version.frame_rates.d29976}}
-            </td>
-            <td>
-                {{version.frame_rates.other}}
-            </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.notes}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
                 {{version.pass_fail}}
             </td>
+        </tr>
+        <tr ng-repeat="version in report.report">
         </tr>
     </tbody>
 </table>

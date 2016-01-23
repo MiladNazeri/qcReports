@@ -21,16 +21,16 @@
             <div class="form-group">
                 <label for="audio_file_type">File Type</label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.file_type.wav" id="audio_file_type1" value="WAV" />WAV
+                    <input type="checkbox" ng-model="job.file_type.wav" id="audio_file_type1" ng-true-value="'WAV'" />WAV
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.file_type.aiff" id="audio_file_type2" value="AIFF" />AIFF
+                    <input type="checkbox" ng-model="job.file_type.aiff" id="audio_file_type2" ng-true-value="'AIFF'" />AIFF
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.file_type.mp3" id="audio_file_type3" value="MP3" />MP3
+                    <input type="checkbox" ng-model="job.file_type.mp3" id="audio_file_type3" ng-true-value="'MP3'" />MP3
                 </label>
                 <label class="checkbox-inline">
-                    <input type="checkbox" ng-model="job.file_type.other" id="audio_file_type4" value="Other" />Other
+                    <input type="checkbox" ng-model="job.file_type.other" id="audio_file_type4" ng-true-value="'Other'" />Other
                 </label>
             </div>
             <div class="form-group">

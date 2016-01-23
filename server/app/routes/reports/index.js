@@ -47,5 +47,30 @@ router.get('/', function (req, res, next) {
     }
 })
 
+router.get('/report/:id', function (req, res, next) {
+    Reports.findById(req.params.id)
+    .then( resolved, error )
+
+    function resolved (results) {
+          console.log("results", results)
+          return res.json(results).status(200);
+    }
+    function error (err) {
+         next(err);
+    }
+})
+
+router.get('/reportsObj/', function (req, res, next) {
+    Reports.find({}).select({'general.project_number': 1, 'general.project_name': 1})
+    .then( resolved, error )
+
+    function resolved (results) {
+          return res.json(results).status(200);
+    }
+    function error (err) {
+         next(err);
+    }
+})
+
 
 

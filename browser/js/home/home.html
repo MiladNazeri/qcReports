@@ -1,42 +1,40 @@
 <section id="home">
-    <div ng-if="report.video_files">
-        <h2>General</h2>
-        <table-general report="report"></table-general>
-    </div>
-    <div ng-if="report.video_files">
-        <h2>Video</h2>
-        <table-video report="item" ng-repeat="item in report.video_files"></table-video>
-    </div>
-    <div ng-if="report.audio_files">
-        <h2>Audio</h2>
-        <table-audio report="item"  ng-repeat="item in report.audio_files"></table-audio>
-    </div>
-    <div ng-if="report.artwork_pack_shots">
-        <h2>Artwork</h2>
-        <table-artwork report="item" ng-repeat="item in report.artwork_pack_shots"></table-artwork>
-    </div>
-    <div ng-if="report.after_effects">
-        <h2>After Effects</h2>
-        <table-after report="item"  ng-repeat="item in report.after_effects"></table-after>
-    </div>
-    <div ng-if="report.flame">
-        <h2>Flame</h2>
-        <table-flame report="item" ng-repeat="item in report.flame"></table-flame>
-    </div>
-    <div ng-if="report.nuke_projects">
-        <h2>Nuke</h2>
-        <table-nuke report="item"  ng-repeat="item in report.nuke_projects"></table-nuke>
-    </div>
-    <div ng-if="report.three_d">
-        <h2>3D</h2>
-        <table-three-d report="item" ng-repeat="item in report.three_d"></table-three-d>
-    </div>
-    <div ng-if="report.proTools">
-        <h2>Pro Tools</h2>
-        <table-protools report="item" ng-repeat="item in report.proTools"></table-protools>
-    </div>
-    <div ng-if="report.other">
-        <h2>Other</h2>
-        <table-other report="item"  ng-repeat="item in report.other"></table-other>
+    <div id"tableHome">
+        <div id="searchHome">
+            <label>Project Number<input ng-model="search.general.project_number"></label>
+            <label>Project Name<input ng-model="search.general.project_name"></label>
+        </div>
+        {{search}}
+
+        <table class="table table-bordered" id="tableHome">
+            <thead>
+                <tr>
+                </tr>
+                <tr>
+                    <th>
+                        Project Number
+                    </th>
+                    <th>
+                        Project Name
+                    </th>
+                    <th>
+                        View
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="report in reports | filter:search">
+                    <td>
+                        {{report.general.project_number}}
+                    </td>
+                    <td>
+                         {{report.general.project_name}}
+                    </td>
+                    <td>
+                        <a  href="#" ui-sref="viewReport({id: report._id})"><i class="fa fa-eye fa-lg"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </section>

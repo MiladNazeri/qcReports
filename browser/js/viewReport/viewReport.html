@@ -1,0 +1,110 @@
+<section id="viewReport">
+<a  href="#" ui-sref="editReport({id: report._id})"><h1 style="display:inline">Edit Project</h1><i style="margin-left:20px"class="fa fa-pencil fa-2x"></i></a>
+<hr />
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+            <div ng-if="report.general">
+                <h2>General</h2>
+                <table-general report="report"></table-general>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div ng-if="report.general.assets_expected_for_qc">
+                <h2>Assets Included</h2>
+                <table-assets report="report"></table-assets>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-if="report.video_files.length > 0">
+            <div class="col-md-12">
+                <h2>Video</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.video_files">
+                        <table-video report="item"></table-video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.audio_files.length > 0">
+            <div class="col-md-12">
+                <h2>Audio</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.audio_files">
+                        <table-audio report="item"></table-audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.artwork_pack_shots.length > 0">
+            <div class="col-md-12">
+                <h2>Artwork</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.artwork_pack_shots">
+                        <table-artwork report="item"></table-artwork>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.after_effects.length > 0">
+            <div class="col-md-12">
+                <h2>After Effects</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.after_effects">
+                        <table-after report="item"></table-after>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.flame.length > 0">
+            <div class="col-md-12">
+                <h2>Flame</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.flame">
+                        <table-flame report="item"></table-flame>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.nuke_projects.length > 0">
+            <div class="col-md-12">
+                <h2>Nuke</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.nuke_projects">
+                        <table-nuke report="item"></table-nuke>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.three_d.length > 0">
+            <div class="col-md-12">
+                <h2>3D</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.three_d">
+                        <table-three-d report="item"></table-three-d>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.proTools.length > 0">
+            <div class="col-md-12">
+                <h2>Pro Tools</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.proTools">
+                        <table-protools report="item"></table-protools>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="report.other.length > 0">
+            <div class="col-md-12">
+                <h2>Other</h2>
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in report.other">
+                        <table-other report="item"></table-other>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

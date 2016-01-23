@@ -1,96 +1,61 @@
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Hogarth Producer</th>
-            <th>Hogarth Account</th>
-            <th>Project Name</th>
-            <th>Project Number</th>
-            <th>Intended Markets</th>
-            <th>Delivered Via</th>
-            <th>Arrival Date</th>
-            <th>Post House Contact</th>
-            <th>Post House Address</th>
-        </tr>
-    </thead>
+<table class="table table-striped ">
     <tbody>
         <tr>
-            <td>
-                {{report.general.hogarth_producer}}
-            </td>
-            <td>
-                {{report.general.hogarth_account}}
-            </td>
+            <th>Project Name</th>
             <td>
                 {{report.general.project_name}}
             </td>
+        </tr>
+        <tr>
+            <th>Project Number</th>
             <td>
                 {{report.general.project_number}}
             </td>
+        </tr>
+        <tr>
+            <th>Hogarth Producer</th>
             <td>
-                {{report.general.intended_markets}}
+                {{report.general.hogarth_producer}}
             </td>
+        </tr>
+        <tr>
+            <th>Hogarth Account</th>
+            <td>
+                {{report.general.hogarth_account}}
+            </td>
+        </tr>
+        <tr>
+            <th>Intended Markets</th>
+            <td>
+                <span ng-repeat="market in report.general.intended_markets">{{market}}
+                {{$last ? '' : ' / '}}
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th>Delivered Via</th>
             <td>
                 {{report.general.delivered_via}}
             </td>
+        </tr>
+        <tr>
+            <th>Arrival Date</th>
             <td>
-                {{report.general.arrival_date}}
+                {{report.general.arrival_date | date:'yyyy-MM-dd'}}
             </td>
+        </tr>
+        <tr>
+            <th>Post House Contact</th>
             <td>
                 {{report.general.post_house_contact}}
             </td>
+        </tr>
+        <tr>
+            <th>Post House Address</th>
             <td>
                 {{report.general.post_house_address}}
             </td>
         </tr>
-    </tbody>
-</table>
-
-<h2>Assets Included</h2>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Assets for Video Files</th>
-            <th>Assets for Artwork/Pack Shots</th>
-            <th>Assets for After Effects Projects</th>
-            <th>Assets for Protools Sessions</th>
-            <th>Assets for Audio Files</th>
-            <th>Assets for Flame Archives</th>
-            <th>Assets for Nuke Setups</th>
-            <th>Assets for 3D Projects</th>
-            <th>Assets for Other Files</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-           <td>
-                {{report.general.assets_expected_for_qc.video_files}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.artwork_pack_shots}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.after_effects_projects}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.protools_sessions}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.audio_files}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.flame_archive}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.nuke_setup}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.three_d_projects}}
-            </td>
-            <td>
-                {{report.general.assets_expected_for_qc.other.true_false}}
-            </td>
-        </tr>
-
     </tbody>
 </table>

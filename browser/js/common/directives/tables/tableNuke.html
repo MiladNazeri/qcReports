@@ -1,96 +1,92 @@
-
-<table class="table table-bordered">
-    <thead>
+<table class="table table-striped">
+    <tbody>
         <tr>
             <th>Job Number</th>
-            <th>Version Number</th>
-            <th>Nuke Operator</th>
-            <th>Date?</th>
-            <th>Missing Plugins?</th>
-            <th>Notes?</th>
-            <th>Missing Fonts?</th>
-            <th>Notes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="version in report.report">
-           <td>
+            <td ng-repeat="version in report.report">
                 {{report.jobNumber}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Version Number</th>
+            <td ng-repeat="version in report.report">
                 {{version.version}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Nuke Operator</th>
+            <td ng-repeat="version in report.report">
                 {{version.nuke_operator}}
             </td>
-            <td>
-                {{version.date}}
+        </tr>
+        <tr>
+            <th>Date?</th>
+            <td ng-repeat="version in report.report">
+                {{version.date | date:'yyyy-MM-dd'}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Missing Plugins?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_missing_plugins.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_missing_plugins.notes}}
             </td>
-            <td>
-               {{version.are_there_missing_fonts.yes_no}}
+        </tr>
+        <tr>
+            <th>Missing Fonts?</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_there_missing_fonts.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_there_missing_fonts.notes}}
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table class="table table-bordered">
-    <thead>
         <tr>
             <th>Setups Clearly Labeled?</th>
-            <th>Notes</th>
-            <th>Comps Editable?</th>
-            <th>Notes</th>
-            <th>23.976</th>
-            <th>24</th>
-            <th>25</th>
-            <th>29.976</th>
-            <th>Other</th>
-            <th>Notes</th>
-            <th>Pass/Fail</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="version in report.report">
-            <td>
+            <td ng-repeat="version in report.report">
                 {{version.are_all_setups_clearly_labeled.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_all_setups_clearly_labeled.notes}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Comps Editable?</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_all_relevant_comps_editable.yes_no}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.are_all_relevant_comps_editable.notes}}
             </td>
-            <td>
-                {{version.frame_rates.a23967}}
+        </tr>
+        <tr>
+            <th>Frame Rates</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="fr in version.frame_rates">{{fr}}{{$last ? " " : " / "}}</span>
             </td>
-            <td>
-                {{version.frame_rates.b24}}
-            </td>
-            <td>
-                {{version.frame_rates.c25}}
-            </td>
-            <td>
-                {{version.frame_rates.d29976}}
-            </td>
-            <td>
-                {{version.frame_rates.other}}
-            </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
                 {{version.notes}}
             </td>
-            <td>
+        </tr>
+        <tr>
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
                 {{version.pass_fail}}
             </td>
         </tr>

@@ -6,7 +6,7 @@ app.config(function ($stateProvider) {
         controller: 'HomeCtrl',
         resolve: {
             reports: function (ReportsFactory) {
-                return ReportsFactory.getAllReports();
+                return ReportsFactory.getReportsObj();
             }
         }
     });
@@ -14,7 +14,4 @@ app.config(function ($stateProvider) {
 
 app.controller('HomeCtrl', function ($filter,$scope, $state, reports) {
     $scope.reports = reports
-    $scope.report = reports[0]
-    console.log($scope.report)
-
 });

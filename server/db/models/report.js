@@ -79,47 +79,49 @@ var schema = new mongoose.Schema({
                 type: Number
             },
             frame_rates: {
-                a23967: Boolean,
-                b24: Boolean,
-                c25: Boolean,
-                d29976: Boolean,
-                other: Boolean
+                a23967: String,
+                b24: String,
+                c25: String,
+                d29976: String,
+                other: String
             },
             standards: {
-                SD_PAL: Boolean,
-                HD_PAL: Boolean,
-                SD_NTSC: Boolean,
-                HD_NTSC: Boolean
+                SD_PAL: String,
+                HD_PAL: String,
+                SD_NTSC: String,
+                HD_NTSC: String
             },
             aspect_ratios: {
                 type: String
             },
             durations: {
-                a10: Boolean,
-                b15: Boolean,
-                c20: Boolean,
-                d30: Boolean,
-                e60: Boolean,
-                f90: Boolean,
-                other: Boolean
+                a10: String,
+                b15: String,
+                c20: String,
+                d30: String,
+                e60: String,
+                f90: String,
+                other: String
             },
             other_durations: {
                 type: String
             },
             title_safety: {
-                other: Boolean,
-                c16x9: Boolean,
-                b14x9: Boolean,
-                a4x3: Boolean
+                other: String,
+                c16x9: String,
+                b14x9: String,
+                a4x3: String
             },
-            master: {
-                type: Boolean
-            },
-            generic: {
-                type: Boolean
-            },
-            master_no_legals: {
-                type: Boolean
+            master_generics: {
+                master: {
+                    type: String
+                },
+                generic: {
+                    type: String
+                },
+                master_no_legals: {
+                    type: String
+                }
             },
             notes: {
                 type: String
@@ -165,12 +167,13 @@ var schema = new mongoose.Schema({
                 sample_rate: String
             },
             file_type: {
-                wav: Boolean,
-                aiff: Boolean,
-                mp3: Boolean,
-                other: Boolean
+                wav: String,
+                aiff: String,
+                mp3: String,
+                other: String
             },
-            notes: String
+            notes: String,
+            pass_fail: String
         }]
     }],
     after_effects: [{
@@ -189,11 +192,11 @@ var schema = new mongoose.Schema({
             are_there_master_conforms: Boolean,
             are_there_master_renders: Boolean,
             frame_rates: {
-                other: Boolean,
-                d29976: Boolean,
-                c25: Boolean,
-                b24: Boolean,
-                a23967: Boolean
+                other: String,
+                d29976: String,
+                c25: String,
+                b24: String,
+                a23967: String
             },
             is_project_organized: {
                 yes_no: Boolean,
@@ -269,11 +272,11 @@ var schema = new mongoose.Schema({
             are_there_master_conforms: Boolean,
             are_there_master_renders: Boolean,
             frame_rates: {
-                a23967: Boolean,
-                b24: Boolean,
-                c25: Boolean,
-                d29976: Boolean,
-                other: Boolean
+                a23967: String,
+                b24: String,
+                c25: String,
+                d29976: String,
+                other: String
             },
             notes: String,
             pass_fail: String
@@ -305,11 +308,11 @@ var schema = new mongoose.Schema({
                 notes: String
             },
             frame_rates: {
-                a23967: Boolean,
-                b24: Boolean,
-                c25: Boolean,
-                d29976: Boolean,
-                other: Boolean
+                a23967: String,
+                b24: String,
+                c25: String,
+                d29976: String,
+                other: String
             },
             notes: String,
             pass_fail: String
@@ -342,11 +345,11 @@ var schema = new mongoose.Schema({
             },
             three_d_what_3d_program_was_used: String,
             frame_rates: {
-                a23967: Boolean,
-                b24: Boolean,
-                c25: Boolean,
-                d29976: Boolean,
-                other: Boolean
+                a23967: String,
+                b24: String,
+                c25: String,
+                d29976: String,
+                other: String
             },
             notes: String,
             pass_fail: String

@@ -1,11 +1,6 @@
 
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-
-        </tr>
-    </thead>
+<table class="table table-other">
     <tbody>
         <tr >
             <th>Job Number</th>
@@ -28,7 +23,7 @@
         <tr >
             <th>Date?</th>
             <td ng-repeat="version in report.report">
-                {{version.date}}
+                {{version.date | date:'yyyy-MM-dd'}}
             </td>
         </tr>
         <tr >
@@ -45,3 +40,35 @@
         </tr>
     </tbody>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

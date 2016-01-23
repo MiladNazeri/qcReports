@@ -1,102 +1,101 @@
 
-<table class="table table-bordered">
-    <thead>
+<table class="table table-striped">
+    <tbody>
         <tr>
             <th>Job Number</th>
+            <td ng-repeat="version in report.report">
+                 {{report.jobNumber}}
+             </td>
+        </tr>
+        <tr>
             <th>Version Number</th>
+            <td ng-repeat="version in report.report">
+                 {{version.version}}
+             </td>
+        </tr>
+        <tr>
             <th>3D Operator</th>
+            <td ng-repeat="version in report.report">
+                 {{version.operator}}
+             </td>
+        </tr>
+        <tr>
             <th>Date?</th>
+            <td ng-repeat="version in report.report">
+                 {{version.date | date:'yyyy-MM-dd'}}
+             </td>
+        </tr>
+        <tr>
             <th>Missing Plugins?</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_there_missing_plugins.yes_no}}
+             </td>
+        </tr>
+        <tr>
             <th>Notes?</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_there_missing_plugins.notes}}
+             </td>
+        </tr>
+        <tr>
             <th>Comps Editable?</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_all_relevant_builds_editable.yes_no}}
+             </td>
+        </tr>
+        <tr>
             <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_all_relevant_builds_editable.notes}}
+             </td>
+        </tr>
+        <tr>
             <th>Missing Textures?</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_there_missing_textures.yes_no}}
+             </td>
+        </tr>
+        <tr>
             <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_there_missing_textures.notes}}
+             </td>
         </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="version in report.report">
-           <td>
-                {{report.jobNumber}}
-            </td>
-            <td>
-                {{version.version}}
-            </td>
-            <td>
-                {{version.operator}}
-            </td>
-            <td>
-                {{version.date}}
-            </td>
-            <td>
-                {{version.are_there_missing_plugins.yes_no}}
-            </td>
-            <td>
-                {{version.are_there_missing_plugins.notes}}
-            </td>
-            <td>
-               {{version.are_all_relevant_builds_editable.yes_no}}
-            </td>
-            <td>
-                {{version.are_all_relevant_builds_editable.notes}}
-            </td>
-            <td>
-                {{version.are_there_missing_textures.yes_no}}
-            </td>
-            <td>
-                {{version.are_there_missing_textures.notes}}
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<table class="table table-bordered">
-    <thead>
         <tr>
             <th>Clearly Labeled?</th>
-            <th>Notes</th>
-            <th>What Program was used?</th>
-            <th>23.976</th>
-            <th>24</th>
-            <th>25</th>
-            <th>29.976</th>
-            <th>Other</th>
-            <th>Notes</th>
-            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_all_labels_clearly_labeled.yes_no}}
+             </td>
         </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="version in report.report">
-            <td>
-                {{version.are_all_labels_clearly_labeled.yes_no}}
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                 {{version.are_all_labels_clearly_labeled.notes}}
+             </td>
+        </tr>
+        <tr>
+            <th>What Program was used?</th>
+            <td ng-repeat="version in report.report">
+                 {{version.three_d_what_3d_program_was_used}}
+             </td>
+        </tr>
+        <tr>
+            <th>Frame Rates</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="fr in version.frame_rates">{{fr}}{{$last ? " " : " / "}}</span>
             </td>
-            <td>
-                {{version.are_all_labels_clearly_labeled.notes}}
-            </td>
-            <td>
-                {{version.three_d_what_3d_program_was_used}}
-            </td>
-            <td>
-                {{version.frame_rates.a23967}}
-            </td>
-            <td>
-                {{version.frame_rates.b24}}
-            </td>
-            <td>
-                {{version.frame_rates.c25}}
-            </td>
-            <td>
-                {{version.frame_rates.d29976}}
-            </td>
-            <td>
-                {{version.frame_rates.other}}
-            </td>
-            <td>
-                {{version.notes}}
-            </td>
-            <td>
-                {{version.pass_fail}}
-            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                 {{version.notes}}
+             </td>
+        </tr>
+        <tr>
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
+                 {{version.pass_fail}}
+             </td>
         </tr>
     </tbody>
 </table>
