@@ -1,0 +1,61 @@
+
+<table class="table table-striped ">
+    <tbody>
+        <tr>
+            <th>Project Name</th>
+            <td>
+                {{report.general.project_name}}
+            </td>
+        </tr>
+        <tr>
+            <th>Project Number</th>
+            <td>
+                {{report.general.project_number}}
+            </td>
+        </tr>
+        <tr>
+            <th>Hogarth Producer</th>
+            <td>
+                {{report.general.hogarth_producer}}
+            </td>
+        </tr>
+        <tr>
+            <th>Hogarth Account</th>
+            <td>
+                {{report.general.hogarth_account}}
+            </td>
+        </tr>
+        <tr>
+            <th>Intended Markets</th>
+            <td>
+                <span ng-repeat="market in report.general.intended_markets">{{market}}
+                {{$last ? '' : ' / '}}
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th>Delivered Via</th>
+            <td>
+                {{report.general.delivered_via}}
+            </td>
+        </tr>
+        <tr>
+            <th>Arrival Date</th>
+            <td>
+                {{report.general.arrival_date | date:'yyyy-MM-dd'}}
+            </td>
+        </tr>
+        <tr>
+            <th>Post House Contact</th>
+            <td>
+                {{report.general.post_house_contact}}
+            </td>
+        </tr>
+        <tr>
+            <th>Post House Address</th>
+            <td>
+                {{report.general.post_house_address}}
+            </td>
+        </tr>
+    </tbody>
+</table>

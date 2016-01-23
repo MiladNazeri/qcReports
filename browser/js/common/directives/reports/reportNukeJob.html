@@ -1,0 +1,90 @@
+<div id="nuke{{jobNumber}}">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>JOB#{{jobNumber}} <a ng-click="removeJob( {jobNumber: jobNumber, id: 'nuke'+jobNumber} )" class="btn btn-danger"><i class="fa fa-minus fa-lg"></i></a></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nuke_projects_nuke_operator">Nuke Operator</label>
+                        <input type="text" ng-model="job.nuke_operator" class="form-control" id="nuke_projects_nuke_operator" placeholder="Nuke Operator">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nuke_projects_date">Date</label>
+                        <input type="date" ng-model="job.date" class="form-control" id="nuke_projects_date" placeholder="Date">
+                    </div>
+                </div>
+                <label for="nuke_projects_are_all_setups_clearly_labeled_yes_no">Are all setups clearly labeld?</label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_all_setups_clearly_labeled.yes_no" name="{{jobNumber}}nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_yes" value="true"> Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_all_setups_clearly_labeled.yes_no" name="{{jobNumber}}nuke_projects_are_all_setups_clearly_labeled_yes_no" id="nuke_projects_are_all_setups_clearly_labeled_no" value="false"> No
+                </label>
+                <input type="text" ng-model="job.are_all_setups_clearly_labeled.notes" class="form-control" id="nuke_projects_are_all_setups_clearly_labeled_notes" placeholder="Notes?">
+                <label for="nuke_projects_are_all_relevant_comps_editable_yes_no">Are all relevant comps editable?</label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="{{jobNumber}}nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_yes" value="true"> Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_all_relevant_comps_editable.yes_no" name="{{jobNumber}}nuke_projects_are_all_relevant_comps_editable_yes_no" id="nuke_projects_are_all_relevant_comps_editable_no" value="false"> No
+                </label>
+                <input type="text" ng-model="job.are_all_relevant_comps_editable.notes" class="form-control" id="nuke_projects_are_all_relevant_comps_editable_notes" placeholder="Notes">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nuke_projects_are_there_missing_plugins_yes_no">Are There Missing Plugins?</label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_yes" value="true"> Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_there_missing_plugins.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_plugins_yes_no" id="nuke_projects_are_there_missing_plugins_no" value="false"> No
+                </label>
+                <input type="text" ng-model="job.are_there_missing_plugins.notes" class="form-control" id="nuke_projects_are_there_missing_plugins_notes" placeholder="Notes?">
+                <label for="nuke_projects_are_there_missing_fonts_yes_no">Are There Missing Fonts?</label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_there_missing_fonts.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_yes" value="true"> Yes
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.are_there_missing_fonts.yes_no" name="{{jobNumber}}nuke_projects_are_there_missing_fonts_yes_no" id="nuke_projects_are_there_missing_fonts_no" value="false"> No
+                </label>
+                <input type="text" ng-model="job.are_there_missing_fonts.notes" class="form-control" id="nuke_projects_are_there_missing_fonts_notes" placeholder="Notes?">
+                <label for="nuke_projects_frame_rates">Frame Rates?</label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="job.frame_rates.a23967" id="nuke_projects_frame_rates1" ng-true-value="23.976">23.976
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="job.frame_rates.b24" id="nuke_projects_frame_rates2" ng-true-value="24">24
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="job.frame_rates.c25" id="nuke_projects_frame_rates3" ng-true-value="25">25
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="job.frame_rates.d29976" id="nuke_projects_frame_rates4" ng-true-value="29.976">29.976
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" ng-model="job.frame_rates.other" id="nuke_projects_frame_rates5" ng-true-value="'other'">other
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="flame_notes">Final Nuke Notes</label>
+                <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="nuke_projects_notes">Notes</textarea>
+                <label for="nuke_projects_pass_fail">Pass Or Fail</label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}nuke_projects_pass_fail" id="nuke_projects_pass_fail_yes" value="pass"> Pass
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.pass_fail" name="{{jobNumber}}nuke_projects_pass_fail" id="nuke_projects_pass_fail_no" value="fail"> Fail
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

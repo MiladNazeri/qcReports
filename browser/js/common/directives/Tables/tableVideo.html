@@ -1,0 +1,88 @@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>Job Number</th>
+            <td ng-repeat="version in report.report">
+                {{report.jobNumber}}
+            </td>
+        </tr>
+        <tr>
+            <th>Version</th>
+            <td ng-repeat="version in report.report">
+                {{version.version}}
+            </td>
+        </tr>
+        <tr>
+            <th>QC Operator</th>
+            <td ng-repeat="version in report.report">
+                {{version.qc_operator}}
+            </td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td ng-repeat="version in report.report">
+                {{version.date | date:'yyyy-MM-dd' }}
+            </td>
+        </tr>
+        <tr>
+            <th>Total Files Received</th>
+            <td ng-repeat="version in report.report">
+                {{version.total_files_received}}
+            </td>
+        </tr>
+        <tr>
+            <th>Frame Rates</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="fr in version.frame_rates">{{fr}}{{$last ? " " : " / "}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Standards</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="standard in version.standards">{{standard}}{{$last ? " " : " / "}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Aspect Ratios</th>
+            <td ng-repeat="version in report.report">
+                {{version.aspect_ratios}}
+            </td>
+        </tr>
+        <tr>
+            <th>Durations</th>
+            <td ng-repeat="version in report.report">
+                 <span ng-repeat="duration in version.durations">{{duration == 'Other' ? version.other_durations : duration}}{{$last ? " " : " / "}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Title Safety</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="title in version.title_safety">{{title}}{{$last ? " " : " / "}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Codecs</th>
+            <td ng-repeat="version in report.report">
+                {{version.codecs}}
+            </td>
+        </tr>
+        <tr>
+            <th>Master/Generics</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="item in version.master_generics">{{item}}{{$last ? " " : " / "}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

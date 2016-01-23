@@ -1,0 +1,88 @@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>Job Number</th>
+            <td ng-repeat="version in report.report">
+                {{report.jobNumber}}
+            </td>
+        </tr>
+        <tr>
+            <th>Version Number</th>
+            <td ng-repeat="version in report.report">
+                {{version.version}}
+            </td>
+        </tr>
+        <tr>
+            <th>QC Operator</th>
+            <td ng-repeat="version in report.report">
+                {{version.operator}}
+            </td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td ng-repeat="version in report.report">
+                {{version.date | date:'yyyy-MM-dd'}}
+            </td>
+        </tr>
+        <tr>
+            <th>Is Project Organized?</th>
+            <td ng-repeat="version in report.report">
+                {{version.is_project_organized.yes_no}}
+            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.is_project_organized.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Correct Files?</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_there_correct_files.yes_no}}
+            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_there_correct_files.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Editable Comps?</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_all_relevant_comps_editable.yes_no}}
+            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_all_relevant_comps_editable.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Missing Fonts?</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_there_missing_fonts.yes_no}}
+            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.are_there_missing_fonts.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Final Artwork Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>

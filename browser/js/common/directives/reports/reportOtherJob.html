@@ -1,0 +1,38 @@
+<div id="other{{jobNumber}}">
+    <div class="row">
+        <div class="col-md-12">
+         <h3>JOB#{{jobNumber}} <a ng-click="removeJob( {jobNumber: jobNumber, id: 'other'+jobNumber} )" class="btn btn-danger"><i class="fa fa-minus fa-lg"></i></a></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="other_operator">Operator</label>
+                <input type="text" ng-model="job.operator" placeholder="Operator" class="form-control" id="other_operator">
+            </div>
+            <div class="col-md-6">
+                <label for="other_date">Date</label>
+                <input type="date" ng-model="job.date" placeholder="Date" class="form-control" id="other_date">
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="other_notes_full_detail">Full Detail</label>
+                <textarea type="text" rows="3" ng-model="job.notes" class="form-control" id="other_full_detail">Notes</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="proTools_pass_fail">Pass Or Fail</label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.pass_fail" name="other_pass_faill{{jobNumber}}" id="other_pass_fail_yes" value="pass"> Pass
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" ng-model="job.pass_fail" name="other_pass_fail{{jobNumber}}" id="other_pass_fail_no" value="fail"> Fail
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th>Job Number</th>
+            <td ng-repeat="version in report.report">
+                 {{report.jobNumber}}
+             </td>
+        </tr>
+        <tr>
+            <th>Version Number</th>
+            <td ng-repeat="version in report.report">
+                {{version.version}}
+            </td>
+        </tr>
+        <tr>
+            <th>QC Operator</th>
+            <td ng-repeat="version in report.report">
+                {{version.qc_operator}}
+            </td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td ng-repeat="version in report.report">
+                {{version.date | date:'yyyy-MM-dd'}}
+            </td>
+        </tr>
+        <tr>
+            <th>Splits?</th>
+            <td ng-repeat="version in report.report">
+                {{version.splits.included}}
+            </td>
+        </tr>
+        <tr>
+            <th>Splits M/S</th>
+            <td ng-repeat="version in report.report">
+                {{version.splits.mono_stereo}}
+            </td>
+        </tr>
+        <tr>
+            <th>Splits 12 Frame Mute</th>
+            <td ng-repeat="version in report.report">
+               {{version.splits.twelve_frame_mute}}
+            </td>
+        </tr>
+        <tr>
+            <th>Splits Sample Rate</th>
+            <td ng-repeat="version in report.report">
+                {{version.splits.sample_rate}}
+            </td>
+        </tr>
+        <tr>
+            <th>5.1?</th>
+            <td ng-repeat="version in report.report">
+                {{version.five_one.included}}
+            </td>
+        </tr>
+        <tr>
+            <th>5.1 M/S</th>
+            <td ng-repeat="version in report.report">
+                {{version.five_one.mono_stereo}}
+            </td>
+        </tr>
+        <tr>
+            <th>5.1 12 Frame Mute</th>
+            <td ng-repeat="version in report.report">
+                {{version.five_one.twelve_frame_mute}}
+            </td>
+        </tr>
+        <tr>
+            <th>5.1 Sample Rate</th>
+            <td ng-repeat="version in report.report">
+                {{version.five_one.sample_rate}}
+            </td>
+        </tr>
+        <tr>
+            <th>Full Mix?</th>
+            <td ng-repeat="version in report.report">
+                {{version.full_mix.included}}
+            </td>
+        </tr>
+        <tr>
+            <th>Full Mix M/S</th>
+            <td ng-repeat="version in report.report">
+                {{version.full_mix.mono_stereo}}
+            </td>
+        </tr>
+        <tr>
+            <th>Full Mix 12 Frame Mute</th>
+            <td ng-repeat="version in report.report">
+                {{version.full_mix.twelve_frame_mute}}
+            </td>
+        </tr>
+        <tr>
+            <th>Full Mix Sample Rate</th>
+            <td ng-repeat="version in report.report">
+                {{version.full_mix.sample_rate}}
+            </td>
+        </tr>
+        <tr>
+            <th>File Types</th>
+            <td ng-repeat="version in report.report">
+                <span ng-repeat="type in version.file_type">{{type}}{{$last ? " " : " / "}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td ng-repeat="version in report.report">
+                {{version.notes}}
+            </td>
+        </tr>
+        <tr>
+            <th>Pass/Fail</th>
+            <td ng-repeat="version in report.report">
+                {{version.pass_fail}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="version in report.report">
+
+        </tr>
+    </tbody>
+</table>

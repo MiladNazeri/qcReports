@@ -6,12 +6,12 @@ app.config(function ($stateProvider) {
         controller: 'HomeCtrl',
         resolve: {
             reports: function (ReportsFactory) {
-                return ReportsFactory.getAllReports();
+                return ReportsFactory.getReportsObj();
             }
         }
     });
 });
 
-app.controller('HomeCtrl', function ($scope, $state, reports) {
-    $scope.reports = reports;
+app.controller('HomeCtrl', function ($filter,$scope, $state, reports) {
+    $scope.reports = reports
 });

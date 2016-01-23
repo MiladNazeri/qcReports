@@ -1,3 +1,40 @@
 <section id="home">
-    {{reports}}
+    <div id"tableHome">
+        <div id="searchHome">
+            <label>Project Number<input ng-model="search.general.project_number"></label>
+            <label>Project Name<input ng-model="search.general.project_name"></label>
+        </div>
+        {{search}}
+
+        <table class="table table-bordered" id="tableHome">
+            <thead>
+                <tr>
+                </tr>
+                <tr>
+                    <th>
+                        Project Number
+                    </th>
+                    <th>
+                        Project Name
+                    </th>
+                    <th>
+                        View
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="report in reports | filter:search">
+                    <td>
+                        {{report.general.project_number}}
+                    </td>
+                    <td>
+                         {{report.general.project_name}}
+                    </td>
+                    <td>
+                        <a  href="#" ui-sref="viewReport({id: report._id})"><i class="fa fa-eye fa-lg"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
