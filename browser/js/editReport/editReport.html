@@ -1,5 +1,9 @@
 <div class="container">
+
     <ng-include src="'/partials/_report-general.html'"></ng-include>
+    <div ng-repeat="report in report.video_files">
+    <report-video-job remove-job="removeJob('{{report.jobNumber}}', '#videoJobs')" job-number="{{report.jobNumber}}" job="report.report[report.report.length-1]"></report-video-job>
+    </div>
     <report-video ng-if="newReport.general.assets_expected_for_qc.video_files"></report-video>
     <report-audio ng-if="newReport.general.assets_expected_for_qc.audio_files"></report-audio>
     <report-after-effects ng-if="newReport.general.assets_expected_for_qc.after_effects_projects"></report-after-effects>

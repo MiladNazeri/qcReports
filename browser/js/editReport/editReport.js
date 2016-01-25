@@ -16,7 +16,7 @@ app.controller('EditReportCtrl', function ($filter,$scope, $state, COUNTRIES, re
     console.log(COUNTRIES);
     $scope.countries = COUNTRIES.COUNTRIES;
     console.log("report", report);
-    $scope.newReport = report;
+    $scope.report = report;
 
 
 });
