@@ -1,5 +1,20 @@
 <div class="container">
-    <ng-include src="'/partials/_report-general.html'"></ng-include>
+    <uib-tabset type="pills" justified="true ">
+      <uib-tab heading="General Info">
+        <ng-include src="'/partials/_report-general.html'"></ng-include>
+      </uib-tab>
+      <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+        {{tab.content}}
+      </uib-tab>
+      <uib-tab select="alertMe()">
+        <uib-tab-heading>
+          <i class="glyphicon glyphicon-bell"></i> Alert!
+        </uib-tab-heading>
+        I've got an HTML heading, and a select callback. Pretty cool!
+      </uib-tab>
+    </uib-tabset>
+
+
     <report-video ng-if="newReport.general.assets_expected_for_qc.video_files"></report-video>
     <report-audio ng-if="newReport.general.assets_expected_for_qc.audio_files"></report-audio>
     <report-after-effects ng-if="newReport.general.assets_expected_for_qc.after_effects_projects"></report-after-effects>

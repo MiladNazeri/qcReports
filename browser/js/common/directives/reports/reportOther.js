@@ -1,18 +1,18 @@
-app.directive('reportOther', function ($compile) {
+app.directive('reportOther', function ($compile, Search) {
     return {
         restrict: 'E',
         // scope: {},
         templateUrl: 'partials/_report-other.html',
         link: function($scope, element, attrs, controller){
+
             $scope.removeJob = function(jobNumber, id){
-                console.log("jobNumber",jobNumber)
-                console.log("id",id)
-                delete $scope.newReport.tempother.jobs[jobNumber];
+                $scope.newReport.other.splice(Search.indexOfJob(jobNumber, $scope.newReport.other), 1)
                 angular.element(document.getElementById(id)).remove()
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-other-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempother.jobs["+jobNumber+"]' ></report-other-job>")($scope));
+                $scope.newReport.other.push({jobNumber: jobNumber, report: [{version: 1}]})
+                angular.element(document.getElementById(id)).append($compile("<report-other-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.other["+Search.indexOfJob(jobNumber, $scope.newReport.other) +"].report[0]' ></report-other-job>")($scope));
                 $scope.newReport.other.job_number="";
 
             }

@@ -1,4 +1,4 @@
-app.directive('reportThreeD', function ($compile) {
+app.directive('reportThreeD', function ($compile, Search) {
     return {
         restrict: 'E',
         // scope: {},
@@ -6,14 +6,13 @@ app.directive('reportThreeD', function ($compile) {
         link: function($scope, element, attrs, controller){
 
             $scope.removeJob = function(jobNumber, id){
-                console.log("jobNumber",jobNumber)
-                console.log("id",id)
-                delete $scope.newReport.tempthree_d.jobs[jobNumber];
+                $scope.newReport.three_d.splice(Search.indexOfJob(jobNumber, $scope.newReport.three_d), 1)
                 angular.element(document.getElementById(id)).remove()
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-three-d-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempthree_d.jobs["+jobNumber+"]' ></report-three-d-job>")($scope));
+                $scope.newReport.three_d.push({jobNumber: jobNumber, report: [{version: 1}]})
+                angular.element(document.getElementById(id)).append($compile("<report-three-d-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.three_d["+Search.indexOfJob(jobNumber, $scope.newReport.three_d) +"].report[0]' ></report-three-d-job>")($scope));
                 $scope.newReport.three_d.job_number="";
             }
         }

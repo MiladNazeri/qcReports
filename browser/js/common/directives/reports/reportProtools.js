@@ -1,4 +1,4 @@
-app.directive('reportProtools', function ($compile) {
+app.directive('reportProtools', function ($compile, Search) {
     return {
         restrict: 'E',
         // scope: {},
@@ -6,14 +6,13 @@ app.directive('reportProtools', function ($compile) {
         link: function($scope, element, attrs, controller){
 
             $scope.removeJob = function(jobNumber, id){
-                console.log("jobNumber",jobNumber)
-                console.log("id",id)
-                delete $scope.newReport.tempproTools.jobs[jobNumber];
+                $scope.newReport.proTools.splice(Search.indexOfJob(jobNumber, $scope.newReport.proTools), 1)
                 angular.element(document.getElementById(id)).remove()
 
             }
             $scope.addJob = function(jobNumber, id, type, versionNumber){
-                angular.element(document.getElementById(id)).append($compile("<report-protools-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.tempproTools.jobs["+jobNumber+"]' ></report-protools-job>")($scope));
+                $scope.newReport.proTools.push({jobNumber: jobNumber, report: [{version: 1}]})
+                angular.element(document.getElementById(id)).append($compile("<report-protools-job remove-job='removeJob(jobNumber, id)' job-number=" + jobNumber + " job='newReport.proTools["+Search.indexOfJob(jobNumber, $scope.newReport.proTools) +"].report[0]' ></report-protools-job>")($scope));
                 $scope.newReport.proTools.job_number="";
 
             }
